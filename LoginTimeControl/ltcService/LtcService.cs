@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Linq;
 using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
+using System.Timers;
+using Common;
 
 namespace ltcService
 {
     public partial class LtcService : ServiceBase
     {
+        private const int CheckInterval = 60000; // 60 seconds
+        private EventLogger _eventLogger;
+        private Timer _timer;
+
         public LtcService()
         {
             InitializeComponent();
@@ -19,10 +18,21 @@ namespace ltcService
 
         protected override void OnStart(string[] args)
         {
+            _timer = new Timer(CheckInterval);
+            _timer.Elapsed += OnTimer;
+            _timer.Start();
+            _eventLogger = new EventLogger(GetType().Name);
+            _eventLogger.Info("Service started");
+        }
+
+        private void OnTimer(object sender, ElapsedEventArgs e)
+        {
+            _eventLogger.Info("Timer elapsed");
         }
 
         protected override void OnStop()
         {
+            _eventLogger.Info("Service stoped");
         }
     }
 }
