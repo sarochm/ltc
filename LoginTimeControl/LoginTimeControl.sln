@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ltcService", "ltcService\ltcService.csproj", "{67D4E819-8745-4887-BDF5-15DD9EB3D883}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LtcService", "ltcService\LtcService.csproj", "{67D4E819-8745-4887-BDF5-15DD9EB3D883}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{A89B798C-6435-47A4-930A-0D75F848F8E6}"
 EndProject

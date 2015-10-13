@@ -7,8 +7,8 @@
     <ProjectGuid>{67D4E819-8745-4887-BDF5-15DD9EB3D883}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ltcService</RootNamespace>
-    <AssemblyName>ltcService</AssemblyName>
+    <RootNamespace>LtcService</RootNamespace>
+    <AssemblyName>LtcService</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -50,6 +50,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserUnloger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

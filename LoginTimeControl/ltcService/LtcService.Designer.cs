@@ -1,4 +1,4 @@
-﻿namespace ltcService
+﻿namespace LtcService
 {
     partial class LtcService
     {

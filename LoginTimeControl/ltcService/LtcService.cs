@@ -1,9 +1,8 @@
-﻿using System;
-using System.ServiceProcess;
+﻿using System.ServiceProcess;
 using System.Timers;
 using Common;
 
-namespace ltcService
+namespace LtcService
 {
     public partial class LtcService : ServiceBase
     {
@@ -22,7 +21,7 @@ namespace ltcService
             _timer.Elapsed += OnTimer;
             _timer.Start();
             _eventLogger = new EventLogger(GetType().Name);
-            _eventLogger.Info("Service started");
+            _eventLogger.Info("Service is starting");
         }
 
         private void OnTimer(object sender, ElapsedEventArgs e)
@@ -32,7 +31,7 @@ namespace ltcService
 
         protected override void OnStop()
         {
-            _eventLogger.Info("Service stoped");
+            _eventLogger.Info("Service is stopping");
         }
     }
 }
