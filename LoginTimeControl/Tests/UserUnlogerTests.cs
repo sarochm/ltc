@@ -17,7 +17,7 @@ namespace Tests
         [TestMethod]
         public void LogOffAll()
         {
-            // UserUnloger.LogOffAll();  // pozor odhlásí tě
+            // UserUnloger.LogOffAll();  // beware . logs you out
         }
     }
 }
