@@ -5,41 +5,43 @@ using System.Runtime.InteropServices;
 
 namespace LtcService
 {
-    public static class UserUnloger
+    public class UserUnloger
     {
         [DllImport("wtsapi32.dll", SetLastError = true)]
-        static extern bool WTSLogoffSession(IntPtr hServer, int SessionId, bool bWait);
+        private static extern bool WTSLogoffSession(IntPtr hServer, int SessionId, bool bWait);
 
         [DllImport("Wtsapi32.dll")]
-        static extern bool WTSQuerySessionInformation(
-            System.IntPtr hServer, int sessionId, WTS_INFO_CLASS wtsInfoClass, out System.IntPtr ppBuffer, out uint pBytesReturned);
+        private static extern bool WTSQuerySessionInformation(
+            IntPtr hServer, int sessionId, WTS_INFO_CLASS wtsInfoClass, out IntPtr ppBuffer, out uint pBytesReturned);
 
         [DllImport("wtsapi32.dll", SetLastError = true)]
-        static extern IntPtr WTSOpenServer([MarshalAs(UnmanagedType.LPStr)] String pServerName);
+        private static extern IntPtr WTSOpenServer([MarshalAs(UnmanagedType.LPStr)] string pServerName);
 
         [DllImport("wtsapi32.dll")]
-        static extern void WTSCloseServer(IntPtr hServer);
+        private static extern void WTSCloseServer(IntPtr hServer);
 
         [DllImport("wtsapi32.dll", SetLastError = true)]
-        static extern Int32 WTSEnumerateSessions(IntPtr hServer, [MarshalAs(UnmanagedType.U4)] Int32 Reserved, [MarshalAs(UnmanagedType.U4)] Int32 Version, ref IntPtr ppSessionInfo, [MarshalAs(UnmanagedType.U4)] ref Int32 pCount);
+        private static extern int WTSEnumerateSessions(IntPtr hServer, [MarshalAs(UnmanagedType.U4)] int Reserved,
+            [MarshalAs(UnmanagedType.U4)] int Version, ref IntPtr ppSessionInfo,
+            [MarshalAs(UnmanagedType.U4)] ref int pCount);
 
         [DllImport("wtsapi32.dll")]
-        static extern void WTSFreeMemory(IntPtr pMemory);
+        private static extern void WTSFreeMemory(IntPtr pMemory);
 
-        internal static List<int> GetSessionIDs(IntPtr server)
+        internal List<int> GetSessionIDs(IntPtr server)
         {
-            List<int> sessionIds = new List<int>();
-            IntPtr buffer = IntPtr.Zero;
-            int count = 0;
-            int retval = WTSEnumerateSessions(server, 0, 1, ref buffer, ref count);
-            int dataSize = Marshal.SizeOf(typeof(WTS_SESSION_INFO));
-            Int64 current = (int)buffer;
+            var sessionIds = new List<int>();
+            var buffer = IntPtr.Zero;
+            var count = 0;
+            var retval = WTSEnumerateSessions(server, 0, 1, ref buffer, ref count);
+            var dataSize = Marshal.SizeOf(typeof (WTS_SESSION_INFO));
+            long current = (int) buffer;
 
             if (retval != 0)
             {
-                for (int i = 0; i < count; i++)
+                for (var i = 0; i < count; i++)
                 {
-                    WTS_SESSION_INFO si = (WTS_SESSION_INFO)Marshal.PtrToStructure((IntPtr)current, typeof(WTS_SESSION_INFO));
+                    var si = (WTS_SESSION_INFO) Marshal.PtrToStructure((IntPtr) current, typeof (WTS_SESSION_INFO));
                     current += dataSize;
                     sessionIds.Add(si.SessionID);
                 }
@@ -48,36 +50,34 @@ namespace LtcService
             return sessionIds;
         }
 
-        internal static bool LogOffUser(string userName, IntPtr server)
+        internal bool LogOffUser(string userName, IntPtr server)
         {
-
             userName = userName.Trim().ToUpper();
-            List<int> sessions = GetSessionIDs(server);
-            Dictionary<string, int> userSessionDictionary = GetUserSessionDictionary(server, sessions);
+            var sessions = GetSessionIDs(server);
+            var userSessionDictionary = GetUserSessionDictionary(server, sessions);
             if (userSessionDictionary.ContainsKey(userName))
                 return WTSLogoffSession(server, userSessionDictionary[userName], true);
-            else
-                return false;
+            return false;
         }
 
-        private static Dictionary<string, int> GetUserSessionDictionary(IntPtr server, List<int> sessions)
+        private Dictionary<string, int> GetUserSessionDictionary(IntPtr server, List<int> sessions)
         {
-            Dictionary<string, int> userSession = new Dictionary<string, int>();
+            var userSession = new Dictionary<string, int>();
 
             foreach (var sessionId in sessions)
             {
-                string uName = GetUserName(sessionId, server);
+                var uName = GetUserName(sessionId, server);
                 if (!string.IsNullOrWhiteSpace(uName))
                     userSession.Add(uName, sessionId);
             }
             return userSession;
         }
 
-        internal static string GetUserName(int sessionId, IntPtr server)
+        internal string GetUserName(int sessionId, IntPtr server)
         {
-            IntPtr buffer = IntPtr.Zero;
+            var buffer = IntPtr.Zero;
             uint count = 0;
-            string userName = string.Empty;
+            var userName = string.Empty;
             try
             {
                 WTSQuerySessionInformation(server, sessionId, WTS_INFO_CLASS.WTSUserName, out buffer, out count);
@@ -90,19 +90,19 @@ namespace LtcService
             return userName;
         }
 
-        public static bool IsSomeOneLogedOn()
+        public bool IsSomeOneLogedOn()
         {
-            List<string> users = GetLogedUsers();
+            var users = GetLogedUsers();
             return users.Any();
         }
 
-        public static void LogOffAll()
+        public void LogOffAll()
         {
-            IntPtr server = WTSOpenServer(Environment.MachineName);
+            var server = WTSOpenServer(Environment.MachineName);
             try
             {
                 var users = GetLogedUsers();
-                foreach (string user in users)
+                foreach (var user in users)
                 {
                     LogOffUser(user, server);
                 }
@@ -113,14 +113,18 @@ namespace LtcService
             }
         }
 
-        public static List<string> GetLogedUsers()
+        public List<string> GetLogedUsers()
         {
-            IntPtr server = WTSOpenServer(Environment.MachineName);
+            var server = WTSOpenServer(Environment.MachineName);
             List<string> userNames;
             try
             {
                 var ids = GetSessionIDs(server);
-                userNames = ids.Select(i => GetUserName(i, server)).Distinct().Where(n => !string.IsNullOrWhiteSpace(n)).ToList();
+                userNames =
+                    ids.Select(i => GetUserName(i, server))
+                        .Distinct()
+                        .Where(n => !string.IsNullOrWhiteSpace(n))
+                        .ToList();
             }
             finally
             {
@@ -128,15 +132,13 @@ namespace LtcService
             }
             return userNames;
         }
-
     }
 
     [StructLayout(LayoutKind.Sequential)]
     internal struct WTS_SESSION_INFO
     {
-        public Int32 SessionID;
-        [MarshalAs(UnmanagedType.LPStr)]
-        public String pWinStationName;
+        public int SessionID;
+        [MarshalAs(UnmanagedType.LPStr)] public string pWinStationName;
         public WTS_CONNECTSTATE_CLASS State;
     }
 
@@ -182,6 +184,4 @@ namespace LtcService
         WTSClientInfo,
         WTSSessionInfo
     }
-
-
 }

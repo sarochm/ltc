@@ -7,12 +7,12 @@ namespace LtcService
 {
     public class OsUsersReader
     {
-        public static List<string> GetAdmins()
+        public List<string> GetAdmins()
         {
             return GetGroupMembers("administrators");
         }
 
-        public static List<string> GetGroupMembers(string group)
+        public List<string> GetGroupMembers(string group)
         {
             var userNames = new List<string>();
 

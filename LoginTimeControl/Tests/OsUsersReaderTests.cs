@@ -10,7 +10,9 @@ namespace Tests
         [TestMethod]
         public void GetAdmins_ReturnAnyName()
         {
-            var adminsNames = OsUsersReader.GetAdmins();
+            var osUserReader = new OsUsersReader();
+
+            var adminsNames = osUserReader.GetAdmins();
 
             Assert.IsTrue(adminsNames.Count > 0);
         }
