@@ -53,6 +53,7 @@
     <Compile Include="EventLoggerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OsUsersReaderTests.cs" />
+    <Compile Include="SettingsRepositoryTests.cs" />
     <Compile Include="UserUnlogerTests.cs" />
   </ItemGroup>
   <ItemGroup>
