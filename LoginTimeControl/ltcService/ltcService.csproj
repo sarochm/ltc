@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualSettings.cs" />
     <Compile Include="LtcService.cs">
       <SubType>Component</SubType>
     </Compile>
