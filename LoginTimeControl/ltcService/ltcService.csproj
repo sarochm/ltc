@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActualSettings.cs" />
     <Compile Include="Evaluator.cs" />
     <Compile Include="LtcService.cs">
       <SubType>Component</SubType>
@@ -51,9 +50,11 @@
     <Compile Include="LtcService.Designer.cs">
       <DependentUpon>LtcService.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="OsUsersReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsManager.cs" />
     <Compile Include="UserUnloger.cs" />
   </ItemGroup>
   <ItemGroup>

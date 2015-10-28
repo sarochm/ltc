@@ -2,7 +2,7 @@
 
 namespace Common
 {
-    public class EventLogger
+    public class EventLogger : IEventLogger
     {
         private readonly EventLog _eventLog;
 

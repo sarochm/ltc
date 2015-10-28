@@ -23,13 +23,14 @@ namespace LtcService
 
         protected override void OnStart(string[] args)
         {
-            _evaluator = new Evaluator();
+            _eventLogger = new EventLogger(GetType().Name);
+            _evaluator = new Evaluator(_eventLogger);
             _adminUsers = new OsUsersReader().GetAdmins();
             _userUnloger = new UserUnloger();
             _timer = new Timer(CheckInterval);
             _timer.Elapsed += OnTimer;
             _timer.Start();
-            _eventLogger = new EventLogger(GetType().Name);
+
             _eventLogger.Info("Service is starting");
         }
 

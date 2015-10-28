@@ -3,36 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Common;
 
 namespace LtcService
 {
     public class Evaluator
     {
         const int TicksAfterRise = 3;
-        private ActualSettings _actualSettings;
+        private SettingsManager _settingsManager;
 
-        public Evaluator()
+        public Evaluator(IEventLogger eventLogger)
         {
-            _actualSettings = new ActualSettings();
+            _settingsManager = new SettingsManager(eventLogger);
         }
 
         public bool Tick()
         {
+            var settings = _settingsManager.LoadSettings();
             var today = GetTodayDatum();
-            if (_actualSettings.ActualDay != today)
+            if (settings.ActualDay != today)
             {
-                _actualSettings.ActualDay = today;
-                _actualSettings.LeftCount = _actualSettings.DefaultCount;
+                settings.ActualDay = today;
+                settings.TicksLeft = settings.DayTicksLimit;
             };
 
-            var left = _actualSettings.LeftCount;
-            left--;
-            if (left <= 0)
+            settings.TicksLeft--;
+            if (settings.TicksLeft <= 0)
             {
-                _actualSettings.LeftCount = TicksAfterRise;
+                settings.TicksLeft = TicksAfterRise;
+                _settingsManager.SaveSettings(settings);
                 return true;
             }
-            _actualSettings.LeftCount = left;
+            _settingsManager.SaveSettings(settings); 
             return false;
         }
 

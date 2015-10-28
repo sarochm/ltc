@@ -340,7 +340,8 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>LtcService.Primary_output</td><td>{4DC38DFA-2DFE-4D8E-BB7D-4C08EE08E05B}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcservice.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>LtcService.Debug_Symbols</td><td>{7D281C32-23D2-4601-A6C8-E68544D6B446}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcservice.debug_symbols</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>LtcService.exe</td><td>{CBCCE3F3-F01A-4FEA-9474-71DB0CB4954E}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcservice.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1049,7 +1050,8 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
-		<row><td>INSTALLDIR</td><td>LtcService.Primary_output</td></row>
+		<row><td>INSTALLDIR</td><td>LtcService.Debug_Symbols</td></row>
+		<row><td>INSTALLDIR</td><td>LtcService.exe</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1862,7 +1864,8 @@
 	<table name="FeatureComponents">
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
-		<row><td>AlwaysInstall</td><td>LtcService.Primary_output</td></row>
+		<row><td>AlwaysInstall</td><td>LtcService.Debug_Symbols</td></row>
+		<row><td>AlwaysInstall</td><td>LtcService.exe</td></row>
 	</table>
 
 	<table name="File">
@@ -1877,7 +1880,8 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>ltcservice.primary_output</td><td>LtcService.Primary_output</td><td>LtcService.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ltcService&gt;|Built</td><td>3</td><td/></row>
+		<row><td>ltcservice.debug_symbols</td><td>LtcService.Debug_Symbols</td><td>LtcService.Debug Symbols</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ltcService&gt;|Symbols</td><td>3</td><td/></row>
+		<row><td>ltcservice.exe</td><td>LtcService.exe</td><td>LTCSER~1.EXE|LtcService.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\mirek\Source\Repos\ltcgithub\LoginTimeControl\ltcService\bin\Debug\LtcService.exe</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2019,7 +2023,8 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>LtcService.Primary_output</td><td/><td/><td>_09C1F906_6A2A_49BD_9A2A_C774324FE63A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>LtcService.Debug_Symbols</td><td/><td/><td>_A3063C55_4C3E_4884_B8BE_FDFE69289BE6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>LtcService.exe</td><td/><td/><td>_9FEDF899_A74D_405B_B5E9_CFF83549D818_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -3422,6 +3427,7 @@
 		<row><td>IDS_SETUPEXE_EXPIRE_MSG</td><td>1033</td><td>This setup works until %s. The setup will now exit.</td><td>0</td><td/><td>1159943920</td></row>
 		<row><td>IDS_SETUPEXE_LAUNCH_COND_E</td><td>1033</td><td>This setup was built with an evaluation version of InstallShield and can only be launched from setup.exe.</td><td>0</td><td/><td>1159943920</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>LAUNCH~1.EXE|Launch ltcService.exe</td><td>0</td><td/><td>1159935253</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>LAUNCH~1.EXE|Launch LtcService.exe</td><td>0</td><td/><td>-450657844</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>1159943920</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>1159943920</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>1159943920</td></row>
@@ -3715,6 +3721,8 @@
 		<row><td>ID_STRING3</td><td>1033</td><td>MSC.CZ</td><td>0</td><td/><td>-450667669</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>LTC service</td><td>0</td><td/><td>1159935445</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>Login time control</td><td>0</td><td/><td>1159953877</td></row>
+		<row><td>ID_STRING6</td><td>1033</td><td>MSC LTC service</td><td>0</td><td/><td>-450668020</td></row>
+		<row><td>ID_STRING7</td><td>1033</td><td>Login Time Control</td><td>0</td><td/><td>-450651636</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>1159943920</td></row>
 	</table>
 
@@ -3829,6 +3837,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
+		<row><td>LtcService.exe_EB6F9FAC3DD644579C7A08BC18AB12B8.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -4336,7 +4345,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{1E568EAA-20FB-4E6D-87B8-C31F75A50248}</td><td/></row>
 		<row><td>ProductName</td><td>MSC Login Time Control</td><td/></row>
-		<row><td>ProductVersion</td><td>0.01</td><td/></row>
+		<row><td>ProductVersion</td><td>0.02</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4412,6 +4421,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
+		<row><td>LtcService.exe</td><td>LtcService.exe</td><td/><td>msclog_1_msc_login_time_control</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4459,6 +4469,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">Arguments</col>
 		<col def="I2">Wait</col>
 		<col def="s72">Component_</col>
+		<row><td>NewEvent1</td><td>MSC LTC Service</td><td>129</td><td/><td>0</td><td>LtcService.exe</td></row>
 	</table>
 
 	<table name="ServiceInstall">
@@ -4475,6 +4486,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">Arguments</col>
 		<col def="s72">Component_</col>
 		<col def="L255">Description</col>
+		<row><td>NewServiceInstall1</td><td>MSC LTC Service</td><td>##ID_STRING6##</td><td>16</td><td>2</td><td>32769</td><td/><td/><td/><td/><td/><td>LtcService.exe</td><td>##ID_STRING7##</td></row>
 	</table>
 
 	<table name="Shortcut">
@@ -4497,6 +4509,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
+		<row><td>LtcService.exe</td><td>msclog_1_msc_login_time_control</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>LtcService.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>LtcService.exe_EB6F9FAC3DD644579C7A08BC18AB12B8.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
