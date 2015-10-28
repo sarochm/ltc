@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.ServiceProcess;
 using System.Timers;
@@ -19,6 +20,7 @@ namespace LtcService
         public LtcService()
         {
             InitializeComponent();
+            Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
         }
 
         protected override void OnStart(string[] args)

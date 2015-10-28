@@ -14,7 +14,7 @@ namespace LtcService
         private readonly string _fileName;
         private readonly XmlSerializer _xmlSerializer;
 
-        public SettingsManager(IEventLogger eventLogger, string fileName = "Settings.xml")
+        public SettingsManager(IEventLogger eventLogger, string fileName = "LtcSettings.xml")
         {
             _eventLogger = eventLogger;
             _xmlSerializer = new XmlSerializer(typeof (Settings));
