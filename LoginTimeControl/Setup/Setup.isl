@@ -340,7 +340,7 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>ltcService.exe</td><td>{9C6B07AB-6AF5-463C-A9B8-816B71DE52B4}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcservice.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>LtcService.Primary_output</td><td>{4DC38DFA-2DFE-4D8E-BB7D-4C08EE08E05B}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcservice.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1049,7 +1049,7 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
-		<row><td>INSTALLDIR</td><td>ltcService.exe</td></row>
+		<row><td>INSTALLDIR</td><td>LtcService.Primary_output</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1862,7 +1862,7 @@
 	<table name="FeatureComponents">
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
-		<row><td>AlwaysInstall</td><td>ltcService.exe</td></row>
+		<row><td>AlwaysInstall</td><td>LtcService.Primary_output</td></row>
 	</table>
 
 	<table name="File">
@@ -1877,7 +1877,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>ltcservice.exe</td><td>ltcService.exe</td><td>LTCSER~1.EXE|ltcService.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\mirek\Source\Repos\ltcgithub\LoginTimeControl\ltcService\bin\Release\ltcService.exe</td><td>1</td><td/></row>
+		<row><td>ltcservice.primary_output</td><td>LtcService.Primary_output</td><td>LtcService.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ltcService&gt;|Built</td><td>3</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2019,7 +2019,7 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>ltcService.exe</td><td/><td/><td>_B27287DE_1432_49B8_85C5_A3A873396425_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>LtcService.Primary_output</td><td/><td/><td>_09C1F906_6A2A_49BD_9A2A_C774324FE63A_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2608,7 +2608,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>MSC.CZ</td><td>0</td><td/><td>1159955541</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>MSC.CZ</td><td>0</td><td/><td>-450667669</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>1159943920</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>1159943920</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL</td><td>1033</td><td>Microsoft .NET Framework 4.5 Full package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>1159937173</td></row>
@@ -3711,8 +3711,8 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>1159943920</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>1159943920</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>1159948016</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://www.msc.cz</td><td>0</td><td/><td>1159967861</td></row>
-		<row><td>ID_STRING3</td><td>1033</td><td>MSC.CZ</td><td>0</td><td/><td>1159955541</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://www.MSC.CZ.com</td><td>0</td><td/><td>-450667669</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>MSC.CZ</td><td>0</td><td/><td>-450667669</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>LTC service</td><td>0</td><td/><td>1159935445</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>Login time control</td><td>0</td><td/><td>1159953877</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>1159943920</td></row>
@@ -3961,7 +3961,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{FFF54B23-206F-4673-A238-A5D3E4E376F7}</td></row>
 		<row><td>ISUSSignature</td><td>{7DC8DA2E-EDF8-4309-BB2B-4D0029AFA0BF}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewServices,viewRelease</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewServices,viewRelease,viewAppFiles</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4412,8 +4412,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>FileKey1</td><td>ltcService.exe</td><td/><td>msc.cz</td><td>2</td></row>
-		<row><td>FileKey2</td><td>ltcService.exe</td><td/><td>msclog_1_msc_login_time_control</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4461,7 +4459,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">Arguments</col>
 		<col def="I2">Wait</col>
 		<col def="s72">Component_</col>
-		<row><td>NewEvent1</td><td>LTCService</td><td>129</td><td/><td>0</td><td>ltcService.exe</td></row>
 	</table>
 
 	<table name="ServiceInstall">
@@ -4478,7 +4475,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">Arguments</col>
 		<col def="s72">Component_</col>
 		<col def="L255">Description</col>
-		<row><td>NewServiceInstall1</td><td>LTCService</td><td>##ID_STRING4##</td><td>16</td><td>2</td><td>32769</td><td/><td/><td/><td/><td/><td>ltcService.exe</td><td>##ID_STRING5##</td></row>
 	</table>
 
 	<table name="Shortcut">

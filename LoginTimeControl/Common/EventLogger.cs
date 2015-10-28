@@ -11,6 +11,11 @@ namespace Common
             _eventLog = new EventLog {Source = appName};
         }
 
+        public void Debug(string message)
+        {
+            _eventLog.WriteEntry("Debug: "+message, EventLogEntryType.Information);
+        }
+
         public void Info(string message)
         {
             _eventLog.WriteEntry(message,EventLogEntryType.Information);
