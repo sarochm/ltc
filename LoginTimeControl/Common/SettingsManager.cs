@@ -3,9 +3,9 @@ using System.IO;
 using System.Xml.Serialization;
 using Common;
 
-namespace LtcService
+namespace Common
 {
-    public class SettingsManager
+    public class SettingsManager : ISettingsManager
     {
         public const int DefaultTicks = 300;
         public const string DefaultActualDay = "default";
