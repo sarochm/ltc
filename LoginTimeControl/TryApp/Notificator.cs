@@ -44,16 +44,12 @@ namespace TryApp
             {
                 settings.TicksLeft = form.TodayLeft();
                 settings.DayTicksLimit = form.DayLimit();
-                try
-                {
-                    _settingsManager.SaveSettings(settings);
-                }
-                catch (Exception)
+                if (_settingsManager.SaveSettings(settings) == false)
                 {
                     MessageBox.Show("You can't write settings.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                    
                 }
             }
-            //else  Application.Exit();
+            else  Application.Exit();
         }
 
         private void _timer_Elapsed(object sender, ElapsedEventArgs e)
@@ -63,10 +59,10 @@ namespace TryApp
             if (settings.TicksLeft < 6)
             {
                 _notifyIcon.BalloonTipText = string.Format("You will be logged out in {0} minutes", settings.TicksLeft);
+                _notifyIcon.ShowBalloonTip(5000);
             }
             //settings.TicksLeft--;
             //_settingsManager.SaveSettings(settings);
-            _notifyIcon.ShowBalloonTip(5000);
         }
     }
 }

@@ -91,11 +91,6 @@
             0,
             0,
             0});
-            this.numericUpDownLeft.Minimum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
             this.numericUpDownLeft.Name = "numericUpDownLeft";
             this.numericUpDownLeft.Value = new decimal(new int[] {
             3,
