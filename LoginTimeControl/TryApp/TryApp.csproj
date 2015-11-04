@@ -44,9 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeSettingsForm.Designer.cs">
+      <DependentUpon>ChangeSettingsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Notificator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChangeSettingsForm.cs.resx">
+      <DependentUpon>ChangeSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeSettingsForm.resx">
+      <DependentUpon>ChangeSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -27,7 +27,7 @@ namespace Common
             try
             {
                 if (!File.Exists(_fileName)) SaveSettings(new Settings());
-                using (var fileStream = new FileStream(_fileName, FileMode.Open))
+                using (var fileStream = File.OpenRead(_fileName))
                 {
                     settings = (Settings) _xmlSerializer.Deserialize(fileStream);
                 }
