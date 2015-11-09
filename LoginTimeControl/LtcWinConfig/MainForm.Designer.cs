@@ -42,7 +42,7 @@
             // 
             this.labelLeft.AutoSize = true;
             this.labelLeft.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelLeft.Location = new System.Drawing.Point(24, 67);
+            this.labelLeft.Location = new System.Drawing.Point(55, 122);
             this.labelLeft.Name = "labelLeft";
             this.labelLeft.Size = new System.Drawing.Size(93, 13);
             this.labelLeft.TabIndex = 12;
@@ -50,7 +50,7 @@
             // 
             // numericUpDownLeft
             // 
-            this.numericUpDownLeft.Location = new System.Drawing.Point(126, 65);
+            this.numericUpDownLeft.Location = new System.Drawing.Point(157, 120);
             this.numericUpDownLeft.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -69,7 +69,7 @@
             // 
             this.labelDayLimit.AutoSize = true;
             this.labelDayLimit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelDayLimit.Location = new System.Drawing.Point(24, 27);
+            this.labelDayLimit.Location = new System.Drawing.Point(53, 61);
             this.labelDayLimit.Name = "labelDayLimit";
             this.labelDayLimit.Size = new System.Drawing.Size(96, 13);
             this.labelDayLimit.TabIndex = 10;
@@ -77,7 +77,7 @@
             // 
             // numericUpDownDayLimit
             // 
-            this.numericUpDownDayLimit.Location = new System.Drawing.Point(126, 25);
+            this.numericUpDownDayLimit.Location = new System.Drawing.Point(155, 59);
             this.numericUpDownDayLimit.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -101,44 +101,37 @@
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonCancel.Location = new System.Drawing.Point(126, 108);
+            this.buttonCancel.Location = new System.Drawing.Point(146, 178);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 8;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonOK
             // 
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonOK.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonOK.Location = new System.Drawing.Point(27, 108);
+            this.buttonOK.Location = new System.Drawing.Point(53, 178);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 7;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
-            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(238, 170);
+            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.labelLeft);
             this.Controls.Add(this.numericUpDownLeft);
             this.Controls.Add(this.labelDayLimit);
             this.Controls.Add(this.numericUpDownDayLimit);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "MainForm";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "LTC Config";
-            this.TopMost = true;
-            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDayLimit)).EndInit();
             this.ResumeLayout(false);

@@ -343,8 +343,6 @@
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{B575A523-04B6-4451-A80C-CB0538EABD5D}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>LtcService.Debug_Symbols</td><td>{7D281C32-23D2-4601-A6C8-E68544D6B446}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcservice.debug_symbols</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>LtcService.exe</td><td>{8C7CA95E-3360-4C25-B1ED-3998B5D296BF}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcservice.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>LtcWinConfig.Debug_Symbols</td><td>{DEE99B34-16A9-42C0-A29B-37F5E2C0A532}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcwinconfig.debug_symbols</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>LtcWinConfig.exe</td><td>{804D9717-B0FF-4E27-949C-1087B59B6FE3}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcwinconfig.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>TryApp.Debug_Symbols</td><td>{06B763FD-864C-4575-A453-08FBC4DFC221}</td><td>INSTALLDIR</td><td>2</td><td/><td>tryapp.debug_symbols</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>TryApp.exe</td><td>{AB0AD706-B7AF-4DD8-9525-F5DFDBB19022}</td><td>INSTALLDIR</td><td>2</td><td/><td>tryapp.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
@@ -1058,8 +1056,6 @@
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>LtcService.Debug_Symbols</td></row>
 		<row><td>INSTALLDIR</td><td>LtcService.exe</td></row>
-		<row><td>INSTALLDIR</td><td>LtcWinConfig.Debug_Symbols</td></row>
-		<row><td>INSTALLDIR</td><td>LtcWinConfig.exe</td></row>
 		<row><td>INSTALLDIR</td><td>TryApp.Debug_Symbols</td></row>
 		<row><td>INSTALLDIR</td><td>TryApp.exe</td></row>
 	</table>
@@ -1877,8 +1873,6 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>LtcService.Debug_Symbols</td></row>
 		<row><td>AlwaysInstall</td><td>LtcService.exe</td></row>
-		<row><td>AlwaysInstall</td><td>LtcWinConfig.Debug_Symbols</td></row>
-		<row><td>AlwaysInstall</td><td>LtcWinConfig.exe</td></row>
 		<row><td>AlwaysInstall</td><td>TryApp.Debug_Symbols</td></row>
 		<row><td>AlwaysInstall</td><td>TryApp.exe</td></row>
 	</table>
@@ -1897,8 +1891,6 @@
 		<col def="S72">ISComponentSubFolder_</col>
 		<row><td>ltcservice.debug_symbols</td><td>LtcService.Debug_Symbols</td><td>LtcService.Debug Symbols</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ltcService&gt;|Symbols</td><td>3</td><td/></row>
 		<row><td>ltcservice.exe</td><td>LtcService.exe</td><td>LTCSER~1.EXE|LtcService.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Source\Repos\ltcgithub\LoginTimeControl\ltcService\bin\Debug\LtcService.exe</td><td>1</td><td/></row>
-		<row><td>ltcwinconfig.debug_symbols</td><td>LtcWinConfig.Debug_Symbols</td><td>LtcWinConfig.Debug Symbols</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;LtcWinConfig&gt;|Symbols</td><td>3</td><td/></row>
-		<row><td>ltcwinconfig.exe</td><td>LtcWinConfig.exe</td><td>LTCWIN~1.EXE|LtcWinConfig.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Source\Repos\ltcgithub\LoginTimeControl\LtcWinConfig\bin\Debug\LtcWinConfig.exe</td><td>1</td><td/></row>
 		<row><td>tryapp.debug_symbols</td><td>TryApp.Debug_Symbols</td><td>TryApp.Debug Symbols</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TryApp&gt;|Symbols</td><td>3</td><td/></row>
 		<row><td>tryapp.exe</td><td>TryApp.exe</td><td>TryApp.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Source\Repos\ltcgithub\LoginTimeControl\TryApp\bin\Debug\TryApp.exe</td><td>1</td><td/></row>
 		<row><td>tryicon.ico</td><td>ISX_DEFAULTCOMPONENT</td><td>TryIcon.ico</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Source\Repos\ltcgithub\LoginTimeControl\TryApp\bin\Debug\TryIcon.ico</td><td>1</td><td/></row>
@@ -1917,7 +1909,6 @@
 	<table name="ISAssistantTag">
 		<col key="yes" def="s72">Tag</col>
 		<col def="S255">Data</col>
-		<row><td>LtcWinConfig.exe</td><td/></row>
 		<row><td>TryApp.exe</td><td/></row>
 	</table>
 
@@ -2048,8 +2039,6 @@
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_81133705_EE1A_4D9F_B928_98881881C638_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>LtcService.Debug_Symbols</td><td/><td/><td>_A3063C55_4C3E_4884_B8BE_FDFE69289BE6_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>LtcService.exe</td><td/><td/><td>_72B3ABAC_46BA_4F50_999F_1CD4C01CC660_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>LtcWinConfig.Debug_Symbols</td><td/><td/><td>_BAB31B9F_06EC_48D2_B2B5_2858CFEB7B51_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>LtcWinConfig.exe</td><td/><td/><td>_D4D7C83D_D4CC_4DB8_B4CE_0866B3CC1F75_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>TryApp.Debug_Symbols</td><td/><td/><td>_1D14F0E8_668B_42B6_AD9A_93518DCD96C3_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>TryApp.exe</td><td/><td/><td>_F73F0609_D721_407E_8EC5_E452B716F58B_FILTER</td><td/><td/><td/><td/></row>
 	</table>
@@ -2334,7 +2323,6 @@
 		<row><td>ISProductFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectDataFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectFolder</td><td/><td/><td>1</td></row>
-		<row><td>LtcWinConfig</td><td>LtcWinConfig\LtcWinConfig.csproj</td><td/><td>2</td></row>
 		<row><td>ProgramFilesFolder</td><td/><td/><td>1</td></row>
 		<row><td>SystemFolder</td><td/><td/><td>1</td></row>
 		<row><td>TryApp</td><td>TryApp\TryApp.csproj</td><td/><td>2</td></row>
@@ -3457,8 +3445,7 @@
 		<row><td>IDS_SETUPEXE_LAUNCH_COND_E</td><td>1033</td><td>This setup was built with an evaluation version of InstallShield and can only be launched from setup.exe.</td><td>0</td><td/><td>1159943920</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>LAUNCH~1.EXE|Launch ltcService.exe</td><td>0</td><td/><td>1159935253</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>LAUNCH~1.EXE|Launch LtcService.exe</td><td>0</td><td/><td>-450657844</td></row>
-		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>LTC status app</td><td>0</td><td/><td>1034139502</td></row>
-		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>LTC Config</td><td>0</td><td/><td>1034114926</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>LAUNCH~1.EXE|Launch TryApp.exe</td><td>0</td><td/><td>497229268</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>1159943920</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>1159943920</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>1159943920</td></row>
@@ -3748,7 +3735,6 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>1159943920</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>1159943920</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>1159948016</td></row>
-		<row><td>ID_STRING10</td><td>1033</td><td>LAUNCH~1.EXE|Launch LtcWinConfig.exe</td><td>0</td><td/><td>1034125134</td></row>
 		<row><td>ID_STRING2</td><td>1033</td><td>http://www.MSC.CZ</td><td>0</td><td/><td>497268052</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>MSC.CZ</td><td>0</td><td/><td>-450667669</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>LTC service</td><td>0</td><td/><td>1159935445</td></row>
@@ -3872,8 +3858,6 @@
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
 		<row><td>LtcService.exe_EB6F9FAC3DD644579C7A08BC18AB12B8.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
-		<row><td>LtcWinConfig.exe1_A38ACB6C99E4431FBFA8938DD3289A57.exe</td><td/><td>&lt;VSSolutionFolder&gt;\TryApp\TryIcon.ico</td><td>0</td></row>
-		<row><td>LtcWinConfig.exe_2F2115DF965043E1A5752B47CF4ED4E1.exe</td><td/><td>&lt;VSSolutionFolder&gt;\TryApp\TryIcon.ico</td><td>0</td></row>
 		<row><td>TryApp.exe_0EAFB6FDEC9742759F13258D5674406F.exe</td><td/><td>&lt;VSSolutionFolder&gt;\TryApp\bin\Debug\TryIcon.ico</td><td>0</td></row>
 	</table>
 
@@ -4383,7 +4367,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{1E568EAA-20FB-4E6D-87B8-C31F75A50248}</td><td/></row>
 		<row><td>ProductName</td><td>MSC Login Time Control</td><td/></row>
-		<row><td>ProductVersion</td><td>0.04</td><td/></row>
+		<row><td>ProductVersion</td><td>0.03</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4459,7 +4443,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>LtcWinConfig.exe</td><td>LtcWinConfig.exe</td><td/><td>msclog_1_msc_login_time_control</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4547,8 +4530,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>LtcWinConfig.exe</td><td>msclog_1_msc_login_time_control</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>LtcWinConfig.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>LtcWinConfig.exe_2F2115DF965043E1A5752B47CF4ED4E1.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>LtcWinConfig.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>LtcWinConfig.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>LtcWinConfig.exe1_A38ACB6C99E4431FBFA8938DD3289A57.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>TryApp.exe</td><td>StartupFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>TryApp.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>TryApp.exe_0EAFB6FDEC9742759F13258D5674406F.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
