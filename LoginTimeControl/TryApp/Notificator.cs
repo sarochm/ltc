@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.Globalization;
+using System.Threading;
 using System.Timers;
 using System.Windows.Forms;
 using Common;
@@ -17,10 +19,11 @@ namespace TryApp
 
         public Notificator(IEventLogger eventLogger, ISettingsManager settingsManager)
         {
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("cs-CZ");
             _eventLogger = eventLogger;
             _settingsManager = settingsManager;
 
-            var menuItem = new MenuItem("Exit");
+            var menuItem = new MenuItem(Strings.Exit);
             menuItem.Click += menuItem_Click;
             var contextMenu = new ContextMenu(new[] {menuItem});
             _notifyIcon = new NotifyIcon
