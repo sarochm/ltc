@@ -117,7 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Caution" xml:space="preserve">
+    <value>Caution</value>
+  </data>
   <data name="Exit" xml:space="preserve">
     <value>Exit</value>
+  </data>
+  <data name="Initializing" xml:space="preserve">
+    <value>Initializing</value>
+  </data>
+  <data name="P0P1MinutesLeft" xml:space="preserve">
+    <value>{0}/{1} minutes left</value>
+  </data>
+  <data name="YouWillBeLoggedOutInP0Minutes" xml:space="preserve">
+    <value>You will be logged out in {0} minutes</value>
   </data>
 </root>

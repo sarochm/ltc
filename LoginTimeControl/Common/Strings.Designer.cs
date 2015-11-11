@@ -61,11 +61,47 @@ namespace Common {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Caution.
+        /// </summary>
+        public static string Caution {
+            get {
+                return ResourceManager.GetString("Caution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
         public static string Exit {
             get {
                 return ResourceManager.GetString("Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Initializing.
+        /// </summary>
+        public static string Initializing {
+            get {
+                return ResourceManager.GetString("Initializing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}/{1} minutes left.
+        /// </summary>
+        public static string P0P1MinutesLeft {
+            get {
+                return ResourceManager.GetString("P0P1MinutesLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You will be logged out in {0} minutes.
+        /// </summary>
+        public static string YouWillBeLoggedOutInP0Minutes {
+            get {
+                return ResourceManager.GetString("YouWillBeLoggedOutInP0Minutes", resourceCulture);
             }
         }
     }
