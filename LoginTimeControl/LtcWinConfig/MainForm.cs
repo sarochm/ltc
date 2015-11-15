@@ -34,8 +34,8 @@ namespace LtcWinConfig
         private void LoadSettings()
         {
             _settings = _settingsManager.LoadSettings();
-            numericUpDownDayLimit.Value = _settings.DayTicksLimit;
-            numericUpDownLeft.Value = _settings.TodeyRemainsCounter;
+            numericUpDownDayLimit.Value = _settings.DayOfWeekLimits[0];
+            numericUpDownLeft.Value = _settings.TodayRemainsMinutes;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -51,8 +51,11 @@ namespace LtcWinConfig
 
         private void SaveSettings()
         {
-            _settings.DayTicksLimit = Convert.ToInt32(numericUpDownDayLimit.Value);
-            _settings.TodeyRemainsCounter = Convert.ToInt32(numericUpDownLeft.Value);
+            for (int i = 0; i < _settings.DayOfWeekLimits.Length; i++)
+            {
+                _settings.DayOfWeekLimits[i] = Convert.ToInt32(numericUpDownDayLimit.Value);
+            }
+            _settings.TodayRemainsMinutes = Convert.ToInt32(numericUpDownLeft.Value);
             _settingsManager.SaveSettings(_settings);
         }
     }

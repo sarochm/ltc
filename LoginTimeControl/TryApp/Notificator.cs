@@ -50,10 +50,10 @@ namespace TryApp
         private void _timer_Elapsed(object sender, ElapsedEventArgs e)
         {
             var settings = _settingsManager.LoadSettings();
-            _notifyIcon.Text = string.Format(Strings.P0P1MinutesLeft, settings.TodeyRemainsCounter, settings.DayTicksLimit);
-            if (settings.TodeyRemainsCounter < 6)
+            _notifyIcon.Text = string.Format(Strings.P0P1MinutesLeft, settings.TodayRemainsMinutes, settings.TodayLimit);
+            if (settings.TodayRemainsMinutes < 6)
             {
-                _notifyIcon.BalloonTipText = string.Format(Strings.YouWillBeLoggedOutInP0Minutes, settings.TodeyRemainsCounter);
+                _notifyIcon.BalloonTipText = string.Format(Strings.YouWillBeLoggedOutInP0Minutes, settings.TodayRemainsMinutes);
                 _notifyIcon.ShowBalloonTip(3000);
             }
             //settings.TicksLeft--;

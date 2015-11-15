@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Xml.Serialization;
 using Common;
 
@@ -44,7 +45,16 @@ namespace Common
 
         private void Repair(Settings settings)
         {
-            if (settings.DayTicksLimit == 0) settings.DayTicksLimit = settings.TodeyRemainsCounter = DefaultTicks;
+            if (settings.DayOfWeekLimits == null) settings.DayOfWeekLimits = new int[6];
+            if (settings.DayOfWeekLimits.All(l => l == 0))
+            {
+                for (int i = 0; i < settings.DayOfWeekLimits.Length; i++)
+                {
+                    
+                    settings.DayOfWeekLimits[i] = DefaultTicks;
+                }
+                settings.TodayRemainsMinutes = DefaultTicks;
+            }
             if (string.IsNullOrWhiteSpace(settings.ActualDay)) settings.ActualDay = DefaultActualDay;
         }
 
