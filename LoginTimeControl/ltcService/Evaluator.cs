@@ -24,13 +24,13 @@ namespace LtcService
             if (settings.ActualDay != today)
             {
                 settings.ActualDay = today;
-                settings.TicksLeft = settings.DayTicksLimit;
+                settings.TodeyRemainsCounter = settings.DayTicksLimit;
             };
 
-            settings.TicksLeft--;
-            if (settings.TicksLeft <= 0)
+            settings.TodeyRemainsCounter--;
+            if (settings.TodeyRemainsCounter <= 0)
             {
-                settings.TicksLeft = TicksAfterRise;
+                settings.TodeyRemainsCounter = TicksAfterRise;
                 _settingsManager.SaveSettings(settings);
                 return true;
             }

@@ -17,8 +17,8 @@ namespace Tests
             {
                 ActualDay = "Today",
                 DayTicksLimit = 600,
-                TicksLeft = 500,
-                DaysOfWeekTicksLimit = new int[] { 10,11,12,13,14,15,16}
+                TodeyRemainsCounter = 500,
+                DayOfWeekLimits = new int[] { 10,11,12,13,14,15,16}
             };
 
             settingsManager.SaveSettings(originalSettings);
@@ -26,8 +26,8 @@ namespace Tests
 
             Assert.AreEqual(originalSettings.ActualDay , loadedSettings.ActualDay);
             Assert.AreEqual(originalSettings.DayTicksLimit , loadedSettings.DayTicksLimit);
-            Assert.AreEqual(originalSettings.TicksLeft , loadedSettings.TicksLeft);
-            Assert.IsTrue(originalSettings.DaysOfWeekTicksLimit.SequenceEqual(loadedSettings.DaysOfWeekTicksLimit));
+            Assert.AreEqual(originalSettings.TodeyRemainsCounter , loadedSettings.TodeyRemainsCounter);
+            Assert.IsTrue(originalSettings.DayOfWeekLimits.SequenceEqual(loadedSettings.DayOfWeekLimits));
         }
 
         [TestMethod]
@@ -40,7 +40,7 @@ namespace Tests
             var loadedSettings = settingsManager.LoadSettings();
 
             Assert.AreEqual(loadedSettings.DayTicksLimit , SettingsManager.DefaultTicks);
-            Assert.AreEqual(loadedSettings.TicksLeft , SettingsManager.DefaultTicks);
+            Assert.AreEqual(loadedSettings.TodeyRemainsCounter , SettingsManager.DefaultTicks);
             Assert.AreEqual(loadedSettings.ActualDay, SettingsManager.DefaultActualDay);
         }
 

@@ -44,7 +44,7 @@ namespace Common
 
         private void Repair(Settings settings)
         {
-            if (settings.DayTicksLimit == 0) settings.DayTicksLimit = settings.TicksLeft = DefaultTicks;
+            if (settings.DayTicksLimit == 0) settings.DayTicksLimit = settings.TodeyRemainsCounter = DefaultTicks;
             if (string.IsNullOrWhiteSpace(settings.ActualDay)) settings.ActualDay = DefaultActualDay;
         }
 
