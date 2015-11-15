@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Common
 {
@@ -13,5 +10,6 @@ namespace Common
         public int DayTicksLimit { get; set; }
         public int TicksLeft { get; set; }
 
+        public int[] DaysOfWeekTicksLimit { get; set; }
     }
 }

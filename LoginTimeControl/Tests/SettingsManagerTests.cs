@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Linq;
 using Common;
 using LtcService;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -16,7 +17,8 @@ namespace Tests
             {
                 ActualDay = "Today",
                 DayTicksLimit = 600,
-                TicksLeft = 500
+                TicksLeft = 500,
+                DaysOfWeekTicksLimit = new int[] { 10,11,12,13,14,15,16}
             };
 
             settingsManager.SaveSettings(originalSettings);
@@ -25,6 +27,7 @@ namespace Tests
             Assert.AreEqual(originalSettings.ActualDay , loadedSettings.ActualDay);
             Assert.AreEqual(originalSettings.DayTicksLimit , loadedSettings.DayTicksLimit);
             Assert.AreEqual(originalSettings.TicksLeft , loadedSettings.TicksLeft);
+            Assert.IsTrue(originalSettings.DaysOfWeekTicksLimit.SequenceEqual(loadedSettings.DaysOfWeekTicksLimit));
         }
 
         [TestMethod]
