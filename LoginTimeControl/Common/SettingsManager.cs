@@ -45,7 +45,7 @@ namespace Common
 
         private void Repair(Settings settings)
         {
-            if (settings.DayOfWeekLimits == null) settings.DayOfWeekLimits = new int[6];
+            if (settings.DayOfWeekLimits == null) settings.DayOfWeekLimits = new int[7];
             if (settings.DayOfWeekLimits.All(l => l == 0))
             {
                 for (int i = 0; i < settings.DayOfWeekLimits.Length; i++)
