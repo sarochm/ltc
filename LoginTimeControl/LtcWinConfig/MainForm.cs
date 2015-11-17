@@ -27,8 +27,16 @@ namespace LtcWinConfig
         private void LoadSettings()
         {
             _settings = _settingsManager.LoadSettings();
-            numericUpDownDayLimit.Value = _settings.DayOfWeekLimits[0];
-            numericUpDownLeft.Value = (_settings.TodayRemainsMinutes < numericUpDownLeft.Minimum) ? numericUpDownLeft.Minimum : _settings.TodayRemainsMinutes;
+            numericUpDownSunday.Value = _settings.DayOfWeekLimits[0];
+            numericUpDownMonday.Value = _settings.DayOfWeekLimits[1];
+            numericUpDownTuesday.Value = _settings.DayOfWeekLimits[2];
+            numericUpDownWednesday.Value = _settings.DayOfWeekLimits[3];
+            numericUpDownThursday.Value = _settings.DayOfWeekLimits[4];
+            numericUpDownFriday.Value = _settings.DayOfWeekLimits[5];
+            numericUpDownSaturday.Value = _settings.DayOfWeekLimits[6];
+            numericUpDownLeft.Value = _settings.TodayRemainsMinutes < numericUpDownLeft.Minimum
+                ? numericUpDownLeft.Minimum
+                : _settings.TodayRemainsMinutes;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -44,10 +52,14 @@ namespace LtcWinConfig
 
         private void SaveSettings()
         {
-            for (var i = 0; i < _settings.DayOfWeekLimits.Length; i++)
-            {
-                _settings.DayOfWeekLimits[i] = Convert.ToInt32(numericUpDownDayLimit.Value);
-            }
+            _settings.DayOfWeekLimits[0] = Convert.ToInt32(numericUpDownSunday.Value);
+            _settings.DayOfWeekLimits[1] = Convert.ToInt32(numericUpDownMonday.Value);
+            _settings.DayOfWeekLimits[2] = Convert.ToInt32(numericUpDownTuesday.Value);
+            _settings.DayOfWeekLimits[3] = Convert.ToInt32(numericUpDownWednesday.Value);
+            _settings.DayOfWeekLimits[4] = Convert.ToInt32(numericUpDownThursday.Value);
+            _settings.DayOfWeekLimits[5] = Convert.ToInt32(numericUpDownFriday.Value);
+            _settings.DayOfWeekLimits[6] = Convert.ToInt32(numericUpDownSaturday.Value);
+
             _settings.TodayRemainsMinutes = Convert.ToInt32(numericUpDownLeft.Value);
             _settings.LogoutStarted = false;
             _settingsManager.SaveSettings(_settings);

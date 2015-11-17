@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.Globalization;
-using System.Threading;
 using System.Timers;
 using System.Windows.Forms;
 using Common;
@@ -13,7 +11,6 @@ namespace TryApp
     {
         private readonly NotifyIcon _notifyIcon;
         private readonly ISettingsManager _settingsManager;
-        private readonly Timer _timer;
 
         private IEventLogger _eventLogger;
 
@@ -33,12 +30,12 @@ namespace TryApp
                 Text = Strings.Initializing,
                 ContextMenu = contextMenu
             };
-            _timer = new Timer(60000)
+            var timer = new Timer(60000)
             {
                 AutoReset = true,
                 Enabled = true
             };
-            _timer.Elapsed += _timer_Elapsed;
+            timer.Elapsed += _timer_Elapsed;
         }
 
         private void menuItem_Click(object sender, EventArgs e)
@@ -53,11 +50,10 @@ namespace TryApp
             _notifyIcon.Text = string.Format(Strings.P0P1MinutesLeft, settings.TodayRemainsMinutes, settings.TodayLimit);
             if (settings.LogoutStarted)
             {
-                _notifyIcon.BalloonTipText = string.Format(Strings.YouWillBeLoggedOutInP0Minutes, settings.LogoutCountdown);
+                _notifyIcon.BalloonTipText = string.Format(Strings.YouWillBeLoggedOutInP0Minutes,
+                    settings.LogoutCountdown);
                 _notifyIcon.ShowBalloonTip(3000);
             }
-            //settings.TicksLeft--;
-            //_settingsManager.SaveSettings(settings);
         }
     }
 }
