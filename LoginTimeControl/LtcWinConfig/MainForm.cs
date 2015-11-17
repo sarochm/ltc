@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common;
 
@@ -14,8 +7,8 @@ namespace LtcWinConfig
 {
     public partial class MainForm : Form
     {
-        SettingsManager _settingsManager;
         private Settings _settings;
+        private SettingsManager _settingsManager;
 
 
         public MainForm()
@@ -26,7 +19,7 @@ namespace LtcWinConfig
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            EventLogger eventLogger = new EventLogger("LTC Config");
+            var eventLogger = new EventLogger("LTC Config");
             _settingsManager = new SettingsManager(eventLogger);
             LoadSettings();
         }
@@ -51,7 +44,7 @@ namespace LtcWinConfig
 
         private void SaveSettings()
         {
-            for (int i = 0; i < _settings.DayOfWeekLimits.Length; i++)
+            for (var i = 0; i < _settings.DayOfWeekLimits.Length; i++)
             {
                 _settings.DayOfWeekLimits[i] = Convert.ToInt32(numericUpDownDayLimit.Value);
             }

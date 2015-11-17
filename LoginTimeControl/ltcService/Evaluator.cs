@@ -1,46 +1,60 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Common;
 
 namespace LtcService
 {
     public class Evaluator
     {
-        const int TicksAfterRise = 3;
-        private SettingsManager _settingsManager;
+        private const int TicksAfterRise = 4;
+        private readonly SettingsManager _settingsManager;
 
         public Evaluator(IEventLogger eventLogger)
         {
             _settingsManager = new SettingsManager(eventLogger);
+            var settings = _settingsManager.LoadSettings();
+            CheckToday(settings);
+            settings.LogoutCountdown = TicksAfterRise;
+            settings.LogoutStarted = false;
+            _settingsManager.SaveSettings(settings);
         }
 
         public bool Tick()
         {
+            var result = false;
             var settings = _settingsManager.LoadSettings();
-            var today = GetTodayDatum();
+            CheckToday(settings);
+
+            settings.TodayRemainsMinutes--;
+            if (settings.TodayRemainsMinutes < TicksAfterRise)
+            {
+                settings.LogoutStarted = true;
+                settings.LogoutCountdown--;
+                if (settings.LogoutCountdown <= 0)
+                {
+                    settings.LogoutCountdown = TicksAfterRise;
+                    result = true;
+                }
+            }
+            else
+            {
+                settings.LogoutStarted = false;
+                settings.LogoutCountdown = TicksAfterRise;
+            }
+            _settingsManager.SaveSettings(settings);
+            return result;
+        }
+
+        private void CheckToday(Settings settings)
+        {
+            var today = DateTime.Now.ToShortDateString();
             if (settings.ActualDay != today)
             {
                 settings.ActualDay = today;
                 settings.TodayRemainsMinutes = settings.TodayLimit;
-            };
-
-            settings.TodayRemainsMinutes--;
-            if (settings.TodayRemainsMinutes <= 0)
-            {
-                settings.TodayRemainsMinutes = TicksAfterRise;
-                _settingsManager.SaveSettings(settings);
-                return true;
+                settings.LogoutCountdown = TicksAfterRise;
+                settings.LogoutStarted = false;
             }
-            _settingsManager.SaveSettings(settings); 
-            return false;
-        }
-
-        private static string GetTodayDatum()
-        {
-            return DateTime.Now.ToShortDateString();
+            ;
         }
     }
 }

@@ -51,9 +51,9 @@ namespace TryApp
         {
             var settings = _settingsManager.LoadSettings();
             _notifyIcon.Text = string.Format(Strings.P0P1MinutesLeft, settings.TodayRemainsMinutes, settings.TodayLimit);
-            if (settings.TodayRemainsMinutes < 6)
+            if (settings.LogoutStarted)
             {
-                _notifyIcon.BalloonTipText = string.Format(Strings.YouWillBeLoggedOutInP0Minutes, settings.TodayRemainsMinutes);
+                _notifyIcon.BalloonTipText = string.Format(Strings.YouWillBeLoggedOutInP0Minutes, settings.LogoutCountdown);
                 _notifyIcon.ShowBalloonTip(3000);
             }
             //settings.TicksLeft--;
