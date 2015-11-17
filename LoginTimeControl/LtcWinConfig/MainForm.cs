@@ -28,7 +28,7 @@ namespace LtcWinConfig
         {
             _settings = _settingsManager.LoadSettings();
             numericUpDownDayLimit.Value = _settings.DayOfWeekLimits[0];
-            numericUpDownLeft.Value = _settings.TodayRemainsMinutes;
+            numericUpDownLeft.Value = (_settings.TodayRemainsMinutes < numericUpDownLeft.Minimum) ? numericUpDownLeft.Minimum : _settings.TodayRemainsMinutes;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -49,6 +49,7 @@ namespace LtcWinConfig
                 _settings.DayOfWeekLimits[i] = Convert.ToInt32(numericUpDownDayLimit.Value);
             }
             _settings.TodayRemainsMinutes = Convert.ToInt32(numericUpDownLeft.Value);
+            _settings.LogoutStarted = false;
             _settingsManager.SaveSettings(_settings);
         }
     }

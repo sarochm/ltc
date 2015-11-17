@@ -14,6 +14,7 @@ namespace LtcService
         private List<string> _adminUsers;
         private Evaluator _evaluator;
         private EventLogger _eventLogger;
+        private bool _notAdminUserLoggedIn;
         private Timer _timer;
         private UserUnloger _userUnloger;
 
@@ -21,7 +22,9 @@ namespace LtcService
         {
             InitializeComponent();
             Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
+            _notAdminUserLoggedIn = false;
         }
+
 
         protected override void OnStart(string[] args)
         {
@@ -49,6 +52,7 @@ namespace LtcService
                 var notAdminLogedUsers = logedUsers.Except(_adminUsers).ToList();
                 if (notAdminLogedUsers.Any())
                 {
+                    _notAdminUserLoggedIn = true;
                     if (_evaluator.Tick())
                     {
                         _eventLogger.Info(string.Format("Traing logoff users >{0}<", string.Join("-", logedUsers)));
@@ -56,7 +60,11 @@ namespace LtcService
                     }
                 }
                 else
+                {
+                    if(_notAdminUserLoggedIn) _evaluator.ResetCountdown();
+                    _notAdminUserLoggedIn = false;
                     _eventLogger.Debug(string.Format("Only admin users are logedIn >{0}<", string.Join("-", logedUsers)));
+                }
             }
             catch (Exception ex)
             {

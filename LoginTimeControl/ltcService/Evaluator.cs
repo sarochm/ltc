@@ -31,17 +31,31 @@ namespace LtcService
                 settings.LogoutCountdown--;
                 if (settings.LogoutCountdown <= 0)
                 {
+                    settings.LogoutStarted = false;
                     settings.LogoutCountdown = TicksAfterRise;
                     result = true;
                 }
             }
             else
             {
-                settings.LogoutStarted = false;
-                settings.LogoutCountdown = TicksAfterRise;
+                ResetCountdown(settings);
             }
             _settingsManager.SaveSettings(settings);
             return result;
+        }
+
+        public void ResetCountdown()
+        {
+            var settings = _settingsManager.LoadSettings();
+            ResetCountdown(settings);
+            _settingsManager.SaveSettings(settings);
+        }
+
+
+        private void ResetCountdown(Settings settings)
+        {
+            settings.LogoutStarted = false;
+            settings.LogoutCountdown = TicksAfterRise;
         }
 
         private void CheckToday(Settings settings)
