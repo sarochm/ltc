@@ -340,6 +340,7 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
+		<row><td>Common.Localized_resources</td><td>{60924BF2-8BE2-4194-9833-4954BB4031DD}</td><td>INSTALLDIR</td><td>2</td><td/><td>common.localized_resources</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{B575A523-04B6-4451-A80C-CB0538EABD5D}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>LtcService.Debug_Symbols</td><td>{7D281C32-23D2-4601-A6C8-E68544D6B446}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcservice.debug_symbols</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>LtcService.exe</td><td>{8C7CA95E-3360-4C25-B1ED-3998B5D296BF}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcservice.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1057,6 +1058,7 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>INSTALLDIR</td><td>Common.Localized_resources</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>LtcService.Debug_Symbols</td></row>
 		<row><td>INSTALLDIR</td><td>LtcService.exe</td></row>
@@ -1878,6 +1880,7 @@
 	<table name="FeatureComponents">
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>AlwaysInstall</td><td>Common.Localized_resources</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>LtcService.Debug_Symbols</td></row>
 		<row><td>AlwaysInstall</td><td>LtcService.exe</td></row>
@@ -1899,6 +1902,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
+		<row><td>common.localized_resources</td><td>Common.Localized_resources</td><td>Common.Localized resources</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Common&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
 		<row><td>ltcservice.debug_symbols</td><td>LtcService.Debug_Symbols</td><td>LtcService.Debug Symbols</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ltcService&gt;|Symbols</td><td>3</td><td/></row>
 		<row><td>ltcservice.exe</td><td>LtcService.exe</td><td>LTCSER~1.EXE|LtcService.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Source\Repos\ltcgithub\LoginTimeControl\ltcService\bin\Debug\LtcService.exe</td><td>1</td><td/></row>
 		<row><td>ltcwinconfig.debug_symbols</td><td>LtcWinConfig.Debug_Symbols</td><td>LtcWinConfig.Debug Symbols</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;LtcWinConfig&gt;|Symbols</td><td>3</td><td/></row>
@@ -2049,6 +2053,7 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
+		<row><td>Common.Localized_resources</td><td/><td/><td>_FD802768_4FE8_4C47_8DB4_C714FCF7628D_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_81133705_EE1A_4D9F_B928_98881881C638_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>LtcService.Debug_Symbols</td><td/><td/><td>_A3063C55_4C3E_4884_B8BE_FDFE69289BE6_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>LtcService.exe</td><td/><td/><td>_72B3ABAC_46BA_4F50_999F_1CD4C01CC660_FILTER</td><td/><td/><td/><td/></row>
@@ -2333,6 +2338,7 @@
 		<col def="S255">Value</col>
 		<col def="S255">TestValue</col>
 		<col def="i4">Type</col>
+		<row><td>Common</td><td>Common\Common.csproj</td><td/><td>2</td></row>
 		<row><td>CommonFilesFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISPROJECTDIR</td><td/><td/><td>1</td></row>
 		<row><td>ISProductFolder</td><td/><td/><td>1</td></row>
@@ -2403,7 +2409,7 @@
 		<row><td>DVD-18</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>15.83</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
 		<row><td>DVD-5</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>4.38</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
 		<row><td>DVD-9</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>7.95</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
-		<row><td>SingleImage</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>1</td><td>1033</td><td>0</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>108573</td><td/><td/><td/><td>3</td></row>
+		<row><td>SingleImage</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>1</td><td>1033</td><td>0</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://www.msc.cz</td><td/><td/><td/><td/><td>108573</td><td/><td/><td/><td>3</td></row>
 		<row><td>WebDeployment</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>4</td><td>1033</td><td>2</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>124941</td><td/><td/><td/><td>3</td></row>
 	</table>
 
@@ -4387,9 +4393,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKAPPPOOLS</td><td>##IDS_PROGMSG_IIS_ROLLBACKAPPPOOLS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
-		<row><td>ProductCode</td><td>{CAF422D3-A0AC-4EF6-B5E3-6E7117547C48}</td><td/></row>
+		<row><td>ProductCode</td><td>{04FA0F4C-438D-481E-BA73-A7279928EE31}</td><td/></row>
 		<row><td>ProductName</td><td>MSC Login Time Control</td><td/></row>
-		<row><td>ProductVersion</td><td>0.10</td><td/></row>
+		<row><td>ProductVersion</td><td>0.12</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4678,7 +4684,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s72">ActionProperty</col>
 		<col def="S72">ISDisplayName</col>
 		<row><td>{00000000-0000-0000-0000-000000000000}</td><td>***ALL_VERSIONS***</td><td></td><td></td><td>2</td><td/><td>ISFOUNDNEWERPRODUCTVERSION</td><td>ISPreventDowngrade</td></row>
-		<row><td>{BA55CCD5-580A-48DC-A63A-9A16538D1A9E}</td><td>0.01</td><td>0.10</td><td></td><td>768</td><td/><td>ISACTIONPROP2</td><td>NewUpgradeEntry2</td></row>
+		<row><td>{BA55CCD5-580A-48DC-A63A-9A16538D1A9E}</td><td>0.01</td><td>0.20</td><td></td><td>768</td><td/><td>ISACTIONPROP2</td><td>toVersion020</td></row>
 	</table>
 
 	<table name="Verb">

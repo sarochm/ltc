@@ -29,6 +29,10 @@
 	</ItemGroup>
 	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2015Limited\InstallShield.targets"/>
 	<ItemGroup>
+		<ProjectReference Include="..\Common\Common.csproj">
+			<Name>Common</Name>
+			<Project>{A89B798C-6435-47A4-930A-0D75F848F8E6}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\LtcWinConfig\LtcWinConfig.csproj">
 			<Name>LtcWinConfig</Name>
 			<Project>{D61483AB-55F2-4A29-8DA9-ABCD796C3073}</Project>
