@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
 namespace Common
@@ -8,8 +9,6 @@ namespace Common
     {
         // unique identification of last dey when was setting changed
         public string ActualDay { get; set; }
-        // todo: remove
-        // public int DayTicksLimit { get; set; }
         // limits in minutes for every day of week
         public int[] DayOfWeekLimits { get; set; }
         // todey minutes left
@@ -18,6 +17,8 @@ namespace Common
         public bool LogoutStarted { get; set; }
         //// logout counter
         public int LogoutCountdown { get; set; }
+
+        public List<Interval> AllowIntervals { get; set; }
 
         [XmlIgnore]
         public int TodayLimit

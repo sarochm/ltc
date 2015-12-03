@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
 namespace Common
@@ -7,6 +8,8 @@ namespace Common
     public class Interval
     {
         private const string SerializingTimeFormat = @"hh\:mm";
+
+        public HashSet<DayOfWeek> Days { get; set; }
 
         [XmlIgnore]
         public TimeSpan TimeFrom { get; set; }

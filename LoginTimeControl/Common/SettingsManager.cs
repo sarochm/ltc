@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
-using Common;
 
 namespace Common
 {
@@ -43,21 +43,6 @@ namespace Common
             return settings;
         }
 
-        private void Repair(Settings settings)
-        {
-            if (settings.DayOfWeekLimits == null || settings.DayOfWeekLimits.Length < 7) settings.DayOfWeekLimits = new int[7];
-            if (settings.DayOfWeekLimits.All(l => l == 0))
-            {
-                for (int i = 0; i < settings.DayOfWeekLimits.Length; i++)
-                {
-                    
-                    settings.DayOfWeekLimits[i] = DefaultTicks;
-                }
-                settings.TodayRemainsMinutes = DefaultTicks;
-            }
-            if (string.IsNullOrWhiteSpace(settings.ActualDay)) settings.ActualDay = DefaultActualDay;
-        }
-
         public bool SaveSettings(Settings settings)
         {
             try
@@ -72,6 +57,48 @@ namespace Common
                 return false;
             }
             return true;
+        }
+
+        private List<Interval> DefaultAllowIntervals()
+        {
+            return new List<Interval>
+            {
+                new Interval
+                {
+                    Days =
+                        new HashSet<DayOfWeek>
+                        {
+                            DayOfWeek.Sunday,
+                            DayOfWeek.Monday,
+                            DayOfWeek.Tuesday,
+                            DayOfWeek.Wednesday,
+                            DayOfWeek.Thursday,
+                            DayOfWeek.Friday,
+                            DayOfWeek.Saturday
+                        },
+                    TimeFrom = new TimeSpan(8, 0, 0),
+                    TimeTo = new TimeSpan(20, 0, 0)
+                }
+            };
+        }
+
+        private void Repair(Settings settings)
+        {
+            if (settings.DayOfWeekLimits == null || settings.DayOfWeekLimits.Length < 7)
+                settings.DayOfWeekLimits = new int[7];
+            if (settings.DayOfWeekLimits.All(l => l == 0))
+            {
+                for (var i = 0; i < settings.DayOfWeekLimits.Length; i++)
+                {
+                    settings.DayOfWeekLimits[i] = DefaultTicks;
+                }
+                settings.TodayRemainsMinutes = DefaultTicks;
+            }
+            if (string.IsNullOrWhiteSpace(settings.ActualDay))
+            {
+                settings.ActualDay = DefaultActualDay;
+                settings.AllowIntervals = DefaultAllowIntervals();
+            }
         }
     }
 }
