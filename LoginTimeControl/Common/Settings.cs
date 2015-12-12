@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml.Serialization;
 
 namespace Common
@@ -18,12 +19,17 @@ namespace Common
         //// logout counter
         public int LogoutCountdown { get; set; }
 
-        public List<Interval> AllowIntervals { get; set; }
+        public List<Interval> AllowedIntervals { get; set; }
 
         [XmlIgnore]
         public int TodayLimit
         {
             get { return DayOfWeekLimits[(int) DateTime.Now.DayOfWeek]; }
+        }
+
+        public bool IsInAllovedIntervals(DateTime dateTime)
+        {
+            return AllowedIntervals.Any(i => i.IsIn(dateTime));
         }
     }
 }

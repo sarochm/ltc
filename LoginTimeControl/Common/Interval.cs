@@ -30,5 +30,13 @@ namespace Common
             get { return TimeTo.ToString(SerializingTimeFormat); }
             set { TimeTo = TimeSpan.ParseExact(value, SerializingTimeFormat, null); }
         }
+
+        internal bool IsIn(DateTime dateTime)
+        {
+            if (!Days.Contains(dateTime.DayOfWeek)) return false;
+            var timeOfday = dateTime.TimeOfDay;
+            if (timeOfday > TimeFrom && timeOfday < TimeTo) return true;
+            return false;
+        }
     }
 }
