@@ -31,7 +31,7 @@ namespace Common
             set { TimeTo = TimeSpan.ParseExact(value, SerializingTimeFormat, null); }
         }
 
-        internal bool IsIn(DateTime dateTime)
+        public bool IsIn(DateTime dateTime)
         {
             if (!Days.Contains(dateTime.DayOfWeek)) return false;
             var timeOfday = dateTime.TimeOfDay;
