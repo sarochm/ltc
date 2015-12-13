@@ -341,13 +341,14 @@
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>Common.Localized_resources</td><td>{60924BF2-8BE2-4194-9833-4954BB4031DD}</td><td>INSTALLDIR</td><td>2</td><td/><td>common.localized_resources</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Common.Primary_output</td><td>{403D81B6-A700-4911-B7BE-39CD4DB53D55}</td><td>INSTALLDIR</td><td>2</td><td/><td>common.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{B575A523-04B6-4451-A80C-CB0538EABD5D}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>LtcService.Debug_Symbols</td><td>{7D281C32-23D2-4601-A6C8-E68544D6B446}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcservice.debug_symbols</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>LtcService.exe</td><td>{8C7CA95E-3360-4C25-B1ED-3998B5D296BF}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcservice.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>LtcService.Primary_output</td><td>{E3A01B81-5C79-491C-B0A8-C17850635BA1}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcservice.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>LtcWinConfig.Debug_Symbols</td><td>{DEE99B34-16A9-42C0-A29B-37F5E2C0A532}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcwinconfig.debug_symbols</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>LtcWinConfig.exe</td><td>{804D9717-B0FF-4E27-949C-1087B59B6FE3}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcwinconfig.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>LtcWinConfig.Primary_output</td><td>{B5C839B1-748B-4341-83A1-7CF42F33BF8E}</td><td>INSTALLDIR</td><td>2</td><td/><td>ltcwinconfig.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>TryApp.Debug_Symbols</td><td>{06B763FD-864C-4575-A453-08FBC4DFC221}</td><td>INSTALLDIR</td><td>2</td><td/><td>tryapp.debug_symbols</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>TryApp.exe</td><td>{AB0AD706-B7AF-4DD8-9525-F5DFDBB19022}</td><td>INSTALLDIR</td><td>2</td><td/><td>tryapp.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>TryApp.Primary_output</td><td>{48BDF588-9FEA-4C8B-AE13-9C4B54A283BE}</td><td>INSTALLDIR</td><td>2</td><td/><td>tryapp.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1059,13 +1060,14 @@
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>INSTALLDIR</td><td>Common.Localized_resources</td></row>
+		<row><td>INSTALLDIR</td><td>Common.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>LtcService.Debug_Symbols</td></row>
-		<row><td>INSTALLDIR</td><td>LtcService.exe</td></row>
+		<row><td>INSTALLDIR</td><td>LtcService.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>LtcWinConfig.Debug_Symbols</td></row>
-		<row><td>INSTALLDIR</td><td>LtcWinConfig.exe</td></row>
+		<row><td>INSTALLDIR</td><td>LtcWinConfig.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>TryApp.Debug_Symbols</td></row>
-		<row><td>INSTALLDIR</td><td>TryApp.exe</td></row>
+		<row><td>INSTALLDIR</td><td>TryApp.Primary_output</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1083,7 +1085,7 @@
 		<row><td>ISSelfRegisterFinalize</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFinalize</td><td/><td/></row>
 		<row><td>ISSetAllUsers</td><td>257</td><td>SetAllUsers.dll</td><td>SetAllUsers</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISUnSelfRegisterFiles</td><td/><td/></row>
-		<row><td>RunTryApp</td><td>146</td><td>tryapp.exe</td><td/><td/><td/></row>
+		<row><td>RunTryApp</td><td>146</td><td>tryapp.primary_output</td><td/><td/><td/></row>
 		<row><td>SetARPINSTALLLOCATION</td><td>51</td><td>ARPINSTALLLOCATION</td><td>[INSTALLDIR]</td><td/><td/></row>
 		<row><td>SetAllUsersProfileNT</td><td>51</td><td>ALLUSERSPROFILE</td><td>[%SystemRoot]\Profiles\All Users</td><td/><td/></row>
 		<row><td>ShowMsiLog</td><td>226</td><td>SystemFolder</td><td>[SystemFolder]notepad.exe "[MsiLogFileLocation]"</td><td/><td>Shows Property-driven MSI Log</td></row>
@@ -1881,13 +1883,14 @@
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>Common.Localized_resources</td></row>
+		<row><td>AlwaysInstall</td><td>Common.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>LtcService.Debug_Symbols</td></row>
-		<row><td>AlwaysInstall</td><td>LtcService.exe</td></row>
+		<row><td>AlwaysInstall</td><td>LtcService.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>LtcWinConfig.Debug_Symbols</td></row>
-		<row><td>AlwaysInstall</td><td>LtcWinConfig.exe</td></row>
+		<row><td>AlwaysInstall</td><td>LtcWinConfig.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>TryApp.Debug_Symbols</td></row>
-		<row><td>AlwaysInstall</td><td>TryApp.exe</td></row>
+		<row><td>AlwaysInstall</td><td>TryApp.Primary_output</td></row>
 	</table>
 
 	<table name="File">
@@ -1903,12 +1906,13 @@
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
 		<row><td>common.localized_resources</td><td>Common.Localized_resources</td><td>Common.Localized resources</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Common&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
+		<row><td>common.primary_output</td><td>Common.Primary_output</td><td>Common.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Common&gt;|Built</td><td>3</td><td/></row>
 		<row><td>ltcservice.debug_symbols</td><td>LtcService.Debug_Symbols</td><td>LtcService.Debug Symbols</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ltcService&gt;|Symbols</td><td>3</td><td/></row>
-		<row><td>ltcservice.exe</td><td>LtcService.exe</td><td>LTCSER~1.EXE|LtcService.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Source\Repos\ltcgithub\LoginTimeControl\ltcService\bin\Debug\LtcService.exe</td><td>1</td><td/></row>
+		<row><td>ltcservice.primary_output</td><td>LtcService.Primary_output</td><td>LtcService.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ltcService&gt;|Built</td><td>3</td><td/></row>
 		<row><td>ltcwinconfig.debug_symbols</td><td>LtcWinConfig.Debug_Symbols</td><td>LtcWinConfig.Debug Symbols</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;LtcWinConfig&gt;|Symbols</td><td>3</td><td/></row>
-		<row><td>ltcwinconfig.exe</td><td>LtcWinConfig.exe</td><td>LTCWIN~1.EXE|LtcWinConfig.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Source\Repos\ltcgithub\LoginTimeControl\LtcWinConfig\bin\Debug\LtcWinConfig.exe</td><td>1</td><td/></row>
+		<row><td>ltcwinconfig.primary_output</td><td>LtcWinConfig.Primary_output</td><td>LtcWinConfig.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;LtcWinConfig&gt;|Built</td><td>3</td><td/></row>
 		<row><td>tryapp.debug_symbols</td><td>TryApp.Debug_Symbols</td><td>TryApp.Debug Symbols</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TryApp&gt;|Symbols</td><td>3</td><td/></row>
-		<row><td>tryapp.exe</td><td>TryApp.exe</td><td>TryApp.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Source\Repos\ltcgithub\LoginTimeControl\TryApp\bin\Debug\TryApp.exe</td><td>1</td><td/></row>
+		<row><td>tryapp.primary_output</td><td>TryApp.Primary_output</td><td>TryApp.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TryApp&gt;|Built</td><td>3</td><td/></row>
 		<row><td>tryicon.ico</td><td>ISX_DEFAULTCOMPONENT</td><td>TryIcon.ico</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Source\Repos\ltcgithub\LoginTimeControl\TryApp\bin\Debug\TryIcon.ico</td><td>1</td><td/></row>
 	</table>
 
@@ -2054,13 +2058,14 @@
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
 		<row><td>Common.Localized_resources</td><td/><td/><td>_FD802768_4FE8_4C47_8DB4_C714FCF7628D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Common.Primary_output</td><td/><td/><td>_69D6849D_D41C_4035_AD75_98A10F461192_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_81133705_EE1A_4D9F_B928_98881881C638_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>LtcService.Debug_Symbols</td><td/><td/><td>_A3063C55_4C3E_4884_B8BE_FDFE69289BE6_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>LtcService.exe</td><td/><td/><td>_72B3ABAC_46BA_4F50_999F_1CD4C01CC660_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>LtcService.Primary_output</td><td/><td/><td>_FC2C4EF0_AAFA_4883_A30A_E286CAC6234B_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>LtcWinConfig.Debug_Symbols</td><td/><td/><td>_BAB31B9F_06EC_48D2_B2B5_2858CFEB7B51_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>LtcWinConfig.exe</td><td/><td/><td>_D4D7C83D_D4CC_4DB8_B4CE_0866B3CC1F75_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>LtcWinConfig.Primary_output</td><td/><td/><td>_874C4354_97A7_450C_A3D6_3B7B9B6A902E_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>TryApp.Debug_Symbols</td><td/><td/><td>_1D14F0E8_668B_42B6_AD9A_93518DCD96C3_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>TryApp.exe</td><td/><td/><td>_F73F0609_D721_407E_8EC5_E452B716F58B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>TryApp.Primary_output</td><td/><td/><td>_B39AACD8_6F2D_4D1F_8E59_C8EAFE5BE5EC_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -3759,6 +3764,9 @@
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>1159943920</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>1159948016</td></row>
 		<row><td>ID_STRING10</td><td>1033</td><td>LAUNCH~1.EXE|Launch LtcWinConfig.exe</td><td>0</td><td/><td>1034125134</td></row>
+		<row><td>ID_STRING11</td><td>1033</td><td>MSC Login Time Control</td><td>0</td><td/><td>1713626099</td></row>
+		<row><td>ID_STRING12</td><td>1033</td><td>LTCTRY~1|LTC Try App</td><td>0</td><td/><td>1713607763</td></row>
+		<row><td>ID_STRING13</td><td>1033</td><td>MSC-LT~1|MSC-LTC Config</td><td>0</td><td/><td>1713605747</td></row>
 		<row><td>ID_STRING2</td><td>1033</td><td>http://www.MSC.CZ</td><td>0</td><td/><td>497268052</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>MSC.CZ</td><td>0</td><td/><td>-450667669</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>LTC service</td><td>0</td><td/><td>1159935445</td></row>
@@ -3884,6 +3892,8 @@
 		<row><td>LtcService.exe_EB6F9FAC3DD644579C7A08BC18AB12B8.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>LtcWinConfig.exe1_A38ACB6C99E4431FBFA8938DD3289A57.exe</td><td/><td>&lt;VSSolutionFolder&gt;\TryApp\TryIcon.ico</td><td>0</td></row>
 		<row><td>LtcWinConfig.exe_2F2115DF965043E1A5752B47CF4ED4E1.exe</td><td/><td>&lt;VSSolutionFolder&gt;\TryApp\TryIcon.ico</td><td>0</td></row>
+		<row><td>NewShortcut1_4FD4ADD57393452D99A02F0EE09582A7.exe</td><td/><td>&lt;VSSolutionFolder&gt;\TryApp\TryIcon.ico</td><td>0</td></row>
+		<row><td>NewShortcut2_EDF1E55F621848A48E3D418EDA340A35.exe</td><td/><td>&lt;VSSolutionFolder&gt;\TryApp\TryIcon.ico</td><td>0</td></row>
 		<row><td>TryApp.exe_0EAFB6FDEC9742759F13258D5674406F.exe</td><td/><td>&lt;VSSolutionFolder&gt;\TryApp\bin\Debug\TryIcon.ico</td><td>0</td></row>
 	</table>
 
@@ -4257,7 +4267,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s72">Shortcut_</col>
 		<col def="s0">PropertyKey</col>
 		<col def="s0">PropVariantValue</col>
-		<row><td>ShortcutProperty1</td><td>TryApp.exe</td><td>{9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}, 12</td><td>1</td></row>
 	</table>
 
 	<table name="ODBCAttribute">
@@ -4393,9 +4402,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKAPPPOOLS</td><td>##IDS_PROGMSG_IIS_ROLLBACKAPPPOOLS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
-		<row><td>ProductCode</td><td>{04FA0F4C-438D-481E-BA73-A7279928EE31}</td><td/></row>
+		<row><td>ProductCode</td><td>{D335DC90-E2DE-40EB-A15B-5B39D233A0C1}</td><td/></row>
 		<row><td>ProductName</td><td>MSC Login Time Control</td><td/></row>
-		<row><td>ProductVersion</td><td>0.12</td><td/></row>
+		<row><td>ProductVersion</td><td>0.18</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4471,7 +4480,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>LtcWinConfig.exe</td><td>LtcWinConfig.exe</td><td/><td>msclog_1_msc_login_time_control</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4519,7 +4527,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">Arguments</col>
 		<col def="I2">Wait</col>
 		<col def="s72">Component_</col>
-		<row><td>NewEvent1</td><td>LtcService</td><td>129</td><td/><td>0</td><td>LtcService.exe</td></row>
+		<row><td>NewEvent1</td><td>MscLtcService</td><td>129</td><td/><td>0</td><td>LtcService.Primary_output</td></row>
 	</table>
 
 	<table name="ServiceInstall">
@@ -4536,7 +4544,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">Arguments</col>
 		<col def="s72">Component_</col>
 		<col def="L255">Description</col>
-		<row><td>NewServiceInstall1</td><td>LtcService</td><td>##ID_STRING8##</td><td>16</td><td>2</td><td>32769</td><td/><td/><td/><td/><td/><td>LtcService.exe</td><td>##ID_STRING9##</td></row>
+		<row><td>NewServiceInstall1</td><td>MscLtcService</td><td>##ID_STRING11##</td><td>16</td><td>2</td><td>1</td><td/><td/><td/><td/><td/><td>LtcService.Primary_output</td><td/></row>
 	</table>
 
 	<table name="Shortcut">
@@ -4559,9 +4567,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>LtcWinConfig.exe</td><td>msclog_1_msc_login_time_control</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>LtcWinConfig.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>LtcWinConfig.exe_2F2115DF965043E1A5752B47CF4ED4E1.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>LtcWinConfig.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>LtcWinConfig.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>LtcWinConfig.exe1_A38ACB6C99E4431FBFA8938DD3289A57.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>TryApp.exe</td><td>StartupFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>TryApp.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>TryApp.exe_0EAFB6FDEC9742759F13258D5674406F.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut1</td><td>StartupFolder</td><td>##ID_STRING12##</td><td>TryApp.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td>NewShortcut1_4FD4ADD57393452D99A02F0EE09582A7.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut2</td><td>DesktopFolder</td><td>##ID_STRING13##</td><td>LtcWinConfig.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td>NewShortcut2_EDF1E55F621848A48E3D418EDA340A35.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
@@ -4684,7 +4691,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s72">ActionProperty</col>
 		<col def="S72">ISDisplayName</col>
 		<row><td>{00000000-0000-0000-0000-000000000000}</td><td>***ALL_VERSIONS***</td><td></td><td></td><td>2</td><td/><td>ISFOUNDNEWERPRODUCTVERSION</td><td>ISPreventDowngrade</td></row>
-		<row><td>{BA55CCD5-580A-48DC-A63A-9A16538D1A9E}</td><td>0.01</td><td>0.20</td><td></td><td>768</td><td/><td>ISACTIONPROP2</td><td>toVersion020</td></row>
+		<row><td>{BA55CCD5-580A-48DC-A63A-9A16538D1A9E}</td><td>0.10</td><td>0.50</td><td></td><td>768</td><td/><td>ISACTIONPROP2</td><td>toVersion050</td></row>
 	</table>
 
 	<table name="Verb">

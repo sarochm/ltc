@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
 using System.Timers;
 using System.Windows.Forms;
 using Common;
@@ -12,7 +13,7 @@ namespace TryApp
         private readonly NotifyIcon _notifyIcon;
         private readonly ISettingsManager _settingsManager;
 
-        private IEventLogger _eventLogger;
+        private readonly IEventLogger _eventLogger;
 
         public Notificator(IEventLogger eventLogger, ISettingsManager settingsManager)
         {
@@ -30,6 +31,14 @@ namespace TryApp
                 Text = Strings.Initializing,
                 ContextMenu = contextMenu
             };
+
+            var oneRunTimer = new Timer(3000)
+            {
+                AutoReset = false,
+                Enabled = true
+            };
+            oneRunTimer.Elapsed += _timer_Elapsed; // runs only once after aplication start
+
             var timer = new Timer(60000)
             {
                 AutoReset = true,
@@ -46,14 +55,30 @@ namespace TryApp
 
         private void _timer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            var settings = _settingsManager.LoadSettings();
-            _notifyIcon.Text = string.Format(Strings.P0P1MinutesLeft, settings.TodayRemainsMinutes, settings.TodayLimit);
-            if (settings.LogoutStarted)
+            try
             {
-                _notifyIcon.BalloonTipText = string.Format(Strings.YouWillBeLoggedOutInP0Minutes,
-                    settings.LogoutCountdown);
-                _notifyIcon.ShowBalloonTip(3000);
+                var settings = _settingsManager.LoadSettings();
+                _notifyIcon.Text =
+                    string.Format(Strings.P0P1MinutesLeft, settings.TodayRemainsMinutes, settings.TodayLimit) +
+                    Environment.NewLine + Environment.NewLine +
+                    Strings.AllowedIntervals + Environment.NewLine + GetAllowedIntervalsToString(settings);
+                if (settings.LogoutStarted)
+                {
+                    _notifyIcon.BalloonTipText = string.Format(Strings.YouWillBeLoggedOutInP0Minutes,
+                        settings.LogoutCountdown);
+                    _notifyIcon.ShowBalloonTip(3000);
+                }
             }
+            catch (Exception exception)
+            {
+                _eventLogger.Error("Error on try app notification: " + exception.Message);
+            }
+        }
+
+        private string GetAllowedIntervalsToString(Settings settings)
+        {
+            return string.Join(Environment.NewLine,
+                settings.AllowedIntervals.Select(i => i.TimeFromStr + " : " + i.TimeToStr));
         }
     }
 }

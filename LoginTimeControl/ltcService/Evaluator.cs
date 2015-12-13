@@ -25,7 +25,7 @@ namespace LtcService
             CheckToday(settings);
 
             settings.TodayRemainsMinutes--;
-            if (settings.TodayRemainsMinutes < TicksAfterRise)
+            if (settings.TodayRemainsMinutes < TicksAfterRise || !settings.IsInAllovedIntervals(DateTime.Now.AddMinutes(TicksAfterRise)))
             {
                 settings.LogoutStarted = true;
                 settings.LogoutCountdown--;

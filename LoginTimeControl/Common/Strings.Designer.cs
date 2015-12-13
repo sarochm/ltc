@@ -61,6 +61,15 @@ namespace Common {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allowed intervals.
+        /// </summary>
+        public static string AllowedIntervals {
+            get {
+                return ResourceManager.GetString("AllowedIntervals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Caution.
         /// </summary>
         public static string Caution {

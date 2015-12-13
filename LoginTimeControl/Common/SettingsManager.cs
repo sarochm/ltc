@@ -97,6 +97,9 @@ namespace Common
             if (string.IsNullOrWhiteSpace(settings.ActualDay))
             {
                 settings.ActualDay = DefaultActualDay;
+            }
+            if (settings.AllowedIntervals == null || !settings.AllowedIntervals.Any())
+            {
                 settings.AllowedIntervals = DefaultAllowIntervals();
             }
         }
