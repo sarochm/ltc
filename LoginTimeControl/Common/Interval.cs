@@ -38,5 +38,10 @@ namespace Common
             if (timeOfday > TimeFrom && timeOfday < TimeTo) return true;
             return false;
         }
+
+        public override string ToString()
+        {
+            return string.Format("{0} - {1}   {2}", TimeFromStr, TimeToStr, string.Join(",", Days));
+        }
     }
 }

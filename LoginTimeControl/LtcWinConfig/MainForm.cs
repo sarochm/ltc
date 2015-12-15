@@ -37,6 +37,9 @@ namespace LtcWinConfig
             numericUpDownLeft.Value = _settings.TodayRemainsMinutes < numericUpDownLeft.Minimum
                 ? numericUpDownLeft.Minimum
                 : _settings.TodayRemainsMinutes;
+            listBoxAllowedIntervals.DataSource = _settings.AllowedIntervals;
+            // listBoxAllowedIntervals.DisplayMember = "TimeToStr";
+
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -63,6 +66,12 @@ namespace LtcWinConfig
             _settings.TodayRemainsMinutes = Convert.ToInt32(numericUpDownLeft.Value);
             _settings.LogoutStarted = false;
             _settingsManager.SaveSettings(_settings);
+        }
+
+        private void listBoxAllowedIntervals_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show(_settings.AllowedIntervals[(sender as ListBox).SelectedIndex].ToString());
+            return;
         }
     }
 }

@@ -47,6 +47,7 @@
             this.numericUpDownFriday = new System.Windows.Forms.NumericUpDown();
             this.labelSaturday = new System.Windows.Forms.Label();
             this.numericUpDownSaturday = new System.Windows.Forms.NumericUpDown();
+            this.listBoxAllowedIntervals = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSunday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMonday)).BeginInit();
@@ -314,11 +315,21 @@
             0,
             0});
             // 
+            // listBoxAllowedIntervals
+            // 
+            this.listBoxAllowedIntervals.FormattingEnabled = true;
+            this.listBoxAllowedIntervals.Location = new System.Drawing.Point(15, 184);
+            this.listBoxAllowedIntervals.Name = "listBoxAllowedIntervals";
+            this.listBoxAllowedIntervals.Size = new System.Drawing.Size(340, 121);
+            this.listBoxAllowedIntervals.TabIndex = 26;
+            this.listBoxAllowedIntervals.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxAllowedIntervals_MouseDoubleClick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 170);
+            this.ClientSize = new System.Drawing.Size(367, 356);
+            this.Controls.Add(this.listBoxAllowedIntervals);
             this.Controls.Add(this.labelSaturday);
             this.Controls.Add(this.numericUpDownSaturday);
             this.Controls.Add(this.labelFriday);
@@ -379,6 +390,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDownFriday;
         private System.Windows.Forms.Label labelSaturday;
         private System.Windows.Forms.NumericUpDown numericUpDownSaturday;
+        private System.Windows.Forms.ListBox listBoxAllowedIntervals;
     }
 }
 
