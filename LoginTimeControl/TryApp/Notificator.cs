@@ -58,10 +58,10 @@ namespace TryApp
             try
             {
                 var settings = _settingsManager.LoadSettings();
-                _notifyIcon.Text =
-                    string.Format(Strings.P0P1MinutesLeft, settings.TodayRemainsMinutes, settings.TodayLimit) +
-                    Environment.NewLine + Environment.NewLine +
-                    Strings.AllowedIntervals + Environment.NewLine + GetAllowedIntervalsToString(settings);
+                string notifyText = string.Format(Strings.P0P1MinutesLeft, settings.TodayRemainsMinutes, settings.TodayLimit) +
+                           "\n\n"+
+                           Strings.AllowedIntervals + "\n" + GetAllowedIntervalsToString(settings);
+                _notifyIcon.Text = notifyText.Length > 63 ? notifyText.Substring(0,63): notifyText;
                 if (settings.LogoutStarted)
                 {
                     _notifyIcon.BalloonTipText = string.Format(Strings.YouWillBeLoggedOutInP0Minutes,
@@ -77,8 +77,8 @@ namespace TryApp
 
         private string GetAllowedIntervalsToString(Settings settings)
         {
-            return string.Join(Environment.NewLine,
-                settings.AllowedIntervals.Select(i => i.TimeFromStr + " : " + i.TimeToStr));
+            return string.Join(" ",
+                settings.AllowedIntervals.Select(i => i.TimeFromStr + ":" + i.TimeToStr));
         }
     }
 }

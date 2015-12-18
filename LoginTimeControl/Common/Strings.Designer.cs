@@ -61,7 +61,7 @@ namespace Common {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Allowed intervals.
+        ///   Looks up a localized string similar to Allowed:.
         /// </summary>
         public static string AllowedIntervals {
             get {
