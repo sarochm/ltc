@@ -27,12 +27,21 @@ namespace Common
             get { return DayOfWeekLimits[(int) DateTime.Now.DayOfWeek]; }
         }
 
+        /// <summary>
+        /// check when datetime is in allowed intervals
+        /// </summary>
+        /// <param name="dateTime">specific datetime</param>
+        /// <returns>true if param datetime is in allowed intervals</returns>
         public bool IsInAllovedIntervals(DateTime dateTime)
         {
             return AllowedIntervals.Any(i => i.IsIn(dateTime));
         }
 
-        //todo: dodělat testy
+        /// <summary>
+        /// returns nex allowed interval for specific day and time
+        /// </summary>
+        /// <param name="dateTime">specific datetime</param>
+        /// <returns>intervals</returns>
         public List<Interval> GetNextAllowedIntervals(DateTime dateTime)
         {
             var intervalsAtDay = AllowedIntervals.Where(i => i.Days.Contains(dateTime.DayOfWeek));
