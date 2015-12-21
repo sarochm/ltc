@@ -31,5 +31,13 @@ namespace Common
         {
             return AllowedIntervals.Any(i => i.IsIn(dateTime));
         }
+
+        //todo: dodělat testy
+        public List<Interval> GetNextAllowedIntervals(DateTime dateTime)
+        {
+            var intervalsAtDay = AllowedIntervals.Where(i => i.Days.Contains(dateTime.DayOfWeek));
+            var intervalsEndingAfterToTime = intervalsAtDay.Where(i => i.TimeTo > dateTime.TimeOfDay).OrderBy(n=>n.TimeTo);
+            return intervalsEndingAfterToTime.ToList();
+        }
     }
 }
