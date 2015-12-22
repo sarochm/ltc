@@ -49,6 +49,7 @@
             this.numericUpDownSaturday = new System.Windows.Forms.NumericUpDown();
             this.listBoxAllowedIntervals = new System.Windows.Forms.ListBox();
             this.buttonRemove = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSunday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMonday)).BeginInit();
@@ -335,11 +336,22 @@
             this.buttonRemove.UseVisualStyleBackColor = true;
             this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Location = new System.Drawing.Point(97, 312);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.TabIndex = 28;
+            this.buttonAdd.Text = "Add";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(367, 356);
+            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.listBoxAllowedIntervals);
             this.Controls.Add(this.labelSaturday);
@@ -366,7 +378,6 @@
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "LTC Config";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSunday)).EndInit();
@@ -404,6 +415,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDownSaturday;
         private System.Windows.Forms.ListBox listBoxAllowedIntervals;
         private System.Windows.Forms.Button buttonRemove;
+        private System.Windows.Forms.Button buttonAdd;
     }
 }
 

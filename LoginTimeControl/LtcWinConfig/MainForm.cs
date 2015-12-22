@@ -81,5 +81,11 @@ namespace LtcWinConfig
             listBoxAllowedIntervals.DataSource = null;
             listBoxAllowedIntervals.DataSource = _settings.AllowedIntervals;
         }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            var addWindow = new AddEditInterval();
+            addWindow.ShowDialog();
+        }
     }
 }
