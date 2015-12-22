@@ -5,7 +5,8 @@ namespace LtcService
 {
     public class Evaluator
     {
-        private const int TicksAfterRise = 4;
+        private const int TicksForCountDown = 4;
+        private const int TicksAfterLogOff = 2;
         private readonly SettingsManager _settingsManager;
 
         public Evaluator(IEventLogger eventLogger)
@@ -13,7 +14,7 @@ namespace LtcService
             _settingsManager = new SettingsManager(eventLogger);
             var settings = _settingsManager.LoadSettings();
             CheckToday(settings);
-            settings.LogoutCountdown = TicksAfterRise;
+            settings.LogoutCountdown = TicksForCountDown;
             settings.LogoutStarted = false;
             _settingsManager.SaveSettings(settings);
         }
@@ -25,14 +26,14 @@ namespace LtcService
             CheckToday(settings);
 
             settings.TodayRemainsMinutes--;
-            if (settings.TodayRemainsMinutes < TicksAfterRise || !settings.IsInAllovedIntervals(DateTime.Now.AddMinutes(TicksAfterRise)))
+            if (settings.TodayRemainsMinutes < TicksForCountDown || !settings.IsInAllovedIntervals(DateTime.Now.AddMinutes(TicksForCountDown)))
             {
                 settings.LogoutStarted = true;
                 settings.LogoutCountdown--;
                 if (settings.LogoutCountdown <= 0)
                 {
                     settings.LogoutStarted = false;
-                    settings.LogoutCountdown = TicksAfterRise;
+                    settings.LogoutCountdown = TicksAfterLogOff;
                     result = true;
                 }
             }
@@ -55,7 +56,7 @@ namespace LtcService
         private void ResetCountdown(Settings settings)
         {
             settings.LogoutStarted = false;
-            settings.LogoutCountdown = TicksAfterRise;
+            settings.LogoutCountdown = TicksForCountDown;
         }
 
         private void CheckToday(Settings settings)
@@ -65,10 +66,8 @@ namespace LtcService
             {
                 settings.ActualDay = today;
                 settings.TodayRemainsMinutes = settings.TodayLimit;
-                settings.LogoutCountdown = TicksAfterRise;
-                settings.LogoutStarted = false;
+                ResetCountdown(settings);
             }
-            ;
         }
     }
 }
