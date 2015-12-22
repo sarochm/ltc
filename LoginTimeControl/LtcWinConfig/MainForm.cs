@@ -39,7 +39,6 @@ namespace LtcWinConfig
                 : _settings.TodayRemainsMinutes;
             listBoxAllowedIntervals.DataSource = _settings.AllowedIntervals;
             // listBoxAllowedIntervals.DisplayMember = "TimeToStr";
-
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -70,8 +69,17 @@ namespace LtcWinConfig
 
         private void listBoxAllowedIntervals_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            if (listBoxAllowedIntervals.SelectedIndex == -1) return;
             MessageBox.Show(_settings.AllowedIntervals[(sender as ListBox).SelectedIndex].ToString());
-            return;
+        }
+
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            var selelectedIntervalIndex = listBoxAllowedIntervals.SelectedIndex;
+            if (selelectedIntervalIndex == -1) return;
+            _settings.AllowedIntervals.RemoveAt(selelectedIntervalIndex);
+            listBoxAllowedIntervals.DataSource = null;
+            listBoxAllowedIntervals.DataSource = _settings.AllowedIntervals;
         }
     }
 }

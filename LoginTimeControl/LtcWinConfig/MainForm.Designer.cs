@@ -48,6 +48,7 @@
             this.labelSaturday = new System.Windows.Forms.Label();
             this.numericUpDownSaturday = new System.Windows.Forms.NumericUpDown();
             this.listBoxAllowedIntervals = new System.Windows.Forms.ListBox();
+            this.buttonRemove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSunday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMonday)).BeginInit();
@@ -324,11 +325,22 @@
             this.listBoxAllowedIntervals.TabIndex = 26;
             this.listBoxAllowedIntervals.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxAllowedIntervals_MouseDoubleClick);
             // 
+            // buttonRemove
+            // 
+            this.buttonRemove.Location = new System.Drawing.Point(15, 312);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(75, 23);
+            this.buttonRemove.TabIndex = 27;
+            this.buttonRemove.Text = "Remove";
+            this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(367, 356);
+            this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.listBoxAllowedIntervals);
             this.Controls.Add(this.labelSaturday);
             this.Controls.Add(this.numericUpDownSaturday);
@@ -391,6 +403,7 @@
         private System.Windows.Forms.Label labelSaturday;
         private System.Windows.Forms.NumericUpDown numericUpDownSaturday;
         private System.Windows.Forms.ListBox listBoxAllowedIntervals;
+        private System.Windows.Forms.Button buttonRemove;
     }
 }
 
