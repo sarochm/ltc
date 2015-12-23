@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using Common;
@@ -78,6 +79,11 @@ namespace LtcWinConfig
             var selelectedIntervalIndex = listBoxAllowedIntervals.SelectedIndex;
             if (selelectedIntervalIndex == -1) return;
             _settings.AllowedIntervals.RemoveAt(selelectedIntervalIndex);
+            RefreshListBoxAllowedIntervals();
+        }
+
+        private void RefreshListBoxAllowedIntervals()
+        {
             listBoxAllowedIntervals.DataSource = null;
             listBoxAllowedIntervals.DataSource = _settings.AllowedIntervals;
         }
@@ -86,6 +92,10 @@ namespace LtcWinConfig
         {
             var addWindow = new AddEditInterval();
             addWindow.ShowDialog();
+            if (addWindow.DialogResult == DialogResult.Cancel) return;
+           // _settings.AllowedIntervals.Add(new Interval(){TimeFromStr = "08:08", TimeToStr = "18:18" , Days = new HashSet<DayOfWeek>()});
+            _settings.AllowedIntervals.Add(addWindow.Interval);
+            RefreshListBoxAllowedIntervals();
         }
     }
 }
