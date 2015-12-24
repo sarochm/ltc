@@ -25,8 +25,13 @@ namespace LtcWinConfig
             {
                 checkedListBoxDays.Items.Add(day);
             }
-            //dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            //dateTimePickerFrom.CustomFormat = "HH:mm";
+        }
+
+        private bool Validate()
+        {
+            if (checkedListBoxDays.CheckedItems.Count <1) return false;
+            if (dateTimePickerFrom.Value.TimeOfDay >= dateTimePickerTo.Value.TimeOfDay) return false;
+            return true;
         }
 
         private void buttonAll_Click(object sender, EventArgs e)
@@ -47,6 +52,12 @@ namespace LtcWinConfig
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            if (!Validate())
+            {
+                MessageBox.Show("Setting is not correct", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.DialogResult = DialogResult.None;
+                return;
+            }
             Interval = new Interval();
             Interval.TimeFrom = dateTimePickerFrom.Value.TimeOfDay;
             Interval.TimeTo = dateTimePickerTo.Value.TimeOfDay;
