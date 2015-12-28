@@ -52,6 +52,8 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.groupBoxIntervals = new System.Windows.Forms.GroupBox();
             this.groupBoxDayLimits = new System.Windows.Forms.GroupBox();
+            this.numericUpDownAll = new System.Windows.Forms.NumericUpDown();
+            this.labelAll = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSunday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMonday)).BeginInit();
@@ -62,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSaturday)).BeginInit();
             this.groupBoxIntervals.SuspendLayout();
             this.groupBoxDayLimits.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAll)).BeginInit();
             this.SuspendLayout();
             // 
             // labelLeft
@@ -101,16 +104,16 @@
             // 
             // buttonCancel
             // 
-            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonOK
             // 
-            resources.ApplyResources(this.buttonOK, "buttonOK");
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            resources.ApplyResources(this.buttonOK, "buttonOK");
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
@@ -242,8 +245,8 @@
             // 
             // listBoxAllowedIntervals
             // 
-            resources.ApplyResources(this.listBoxAllowedIntervals, "listBoxAllowedIntervals");
             this.listBoxAllowedIntervals.FormattingEnabled = true;
+            resources.ApplyResources(this.listBoxAllowedIntervals, "listBoxAllowedIntervals");
             this.listBoxAllowedIntervals.Name = "listBoxAllowedIntervals";
             this.listBoxAllowedIntervals.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxAllowedIntervals_MouseDoubleClick);
             // 
@@ -263,16 +266,17 @@
             // 
             // groupBoxIntervals
             // 
-            resources.ApplyResources(this.groupBoxIntervals, "groupBoxIntervals");
             this.groupBoxIntervals.Controls.Add(this.listBoxAllowedIntervals);
             this.groupBoxIntervals.Controls.Add(this.buttonAdd);
             this.groupBoxIntervals.Controls.Add(this.buttonRemove);
+            resources.ApplyResources(this.groupBoxIntervals, "groupBoxIntervals");
             this.groupBoxIntervals.Name = "groupBoxIntervals";
             this.groupBoxIntervals.TabStop = false;
             // 
             // groupBoxDayLimits
             // 
-            resources.ApplyResources(this.groupBoxDayLimits, "groupBoxDayLimits");
+            this.groupBoxDayLimits.Controls.Add(this.labelAll);
+            this.groupBoxDayLimits.Controls.Add(this.numericUpDownAll);
             this.groupBoxDayLimits.Controls.Add(this.numericUpDownTuesday);
             this.groupBoxDayLimits.Controls.Add(this.labelSaturday);
             this.groupBoxDayLimits.Controls.Add(this.numericUpDownSunday);
@@ -287,8 +291,30 @@
             this.groupBoxDayLimits.Controls.Add(this.numericUpDownThursday);
             this.groupBoxDayLimits.Controls.Add(this.numericUpDownWednesday);
             this.groupBoxDayLimits.Controls.Add(this.labelWednesday);
+            resources.ApplyResources(this.groupBoxDayLimits, "groupBoxDayLimits");
             this.groupBoxDayLimits.Name = "groupBoxDayLimits";
             this.groupBoxDayLimits.TabStop = false;
+            // 
+            // numericUpDownAll
+            // 
+            resources.ApplyResources(this.numericUpDownAll, "numericUpDownAll");
+            this.numericUpDownAll.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDownAll.Name = "numericUpDownAll";
+            this.numericUpDownAll.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDownAll.ValueChanged += new System.EventHandler(this.numericUpDownAll_ValueChanged);
+            // 
+            // labelAll
+            // 
+            resources.ApplyResources(this.labelAll, "labelAll");
+            this.labelAll.Name = "labelAll";
             // 
             // MainForm
             // 
@@ -317,6 +343,7 @@
             this.groupBoxIntervals.ResumeLayout(false);
             this.groupBoxDayLimits.ResumeLayout(false);
             this.groupBoxDayLimits.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAll)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,6 +374,8 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.GroupBox groupBoxIntervals;
         private System.Windows.Forms.GroupBox groupBoxDayLimits;
+        private System.Windows.Forms.Label labelAll;
+        private System.Windows.Forms.NumericUpDown numericUpDownAll;
     }
 }
 

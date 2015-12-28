@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using Common;
@@ -93,9 +92,19 @@ namespace LtcWinConfig
             var addWindow = new AddEditInterval();
             addWindow.ShowDialog();
             if (addWindow.DialogResult == DialogResult.Cancel || addWindow.Interval == null) return;
-           // _settings.AllowedIntervals.Add(new Interval(){TimeFromStr = "08:08", TimeToStr = "18:18" , Days = new HashSet<DayOfWeek>()});
+            // _settings.AllowedIntervals.Add(new Interval(){TimeFromStr = "08:08", TimeToStr = "18:18" , Days = new HashSet<DayOfWeek>()});
             _settings.AllowedIntervals.Add(addWindow.Interval);
             RefreshListBoxAllowedIntervals();
+        }
+
+        private void numericUpDownAll_ValueChanged(object sender, EventArgs e)
+        {
+            numericUpDownMonday.Value =
+                numericUpDownTuesday.Value =
+                    numericUpDownWednesday.Value =
+                        numericUpDownThursday.Value =
+                            numericUpDownFriday.Value =
+                                numericUpDownSaturday.Value = numericUpDownSunday.Value = numericUpDownAll.Value;
         }
     }
 }
