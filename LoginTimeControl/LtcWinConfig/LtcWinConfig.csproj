@@ -61,8 +61,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddEditInterval.cs.resx">
+      <DependentUpon>AddEditInterval.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddEditInterval.resx">
       <DependentUpon>AddEditInterval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.cs.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
