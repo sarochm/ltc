@@ -13,7 +13,7 @@ namespace LtcWinConfig
 {
     public partial class AddEditInterval : Form
     {
-        public Interval Interval { get; private set; }
+        public Interval Interval { get; set; }
         public AddEditInterval()
         {
             InitializeComponent();
@@ -58,7 +58,7 @@ namespace LtcWinConfig
                 this.DialogResult = DialogResult.None;
                 return;
             }
-            Interval = new Interval();
+            if (Interval== null) Interval = new Interval();
             Interval.TimeFrom = dateTimePickerFrom.Value.TimeOfDay;
             Interval.TimeTo = dateTimePickerTo.Value.TimeOfDay;
             Interval.Days = new HashSet<DayOfWeek>();

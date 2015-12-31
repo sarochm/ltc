@@ -78,7 +78,7 @@ namespace TryApp
         private string GetAllowedIntervalsToString(Settings settings)
         {
             return string.Join(" ",
-                settings.AllowedIntervals.Select(i => i.TimeFromStr + ":" + i.TimeToStr));
+                settings.GetNextAllowedIntervals(DateTime.Now).Select(i => i.TimeFromStr + ":" + i.TimeToStr));
         }
     }
 }

@@ -70,7 +70,13 @@ namespace LtcWinConfig
         private void listBoxAllowedIntervals_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (listBoxAllowedIntervals.SelectedIndex == -1) return;
-            MessageBox.Show(_settings.AllowedIntervals[(sender as ListBox).SelectedIndex].ToString());
+            //MessageBox.Show(_settings.AllowedIntervals[(sender as ListBox).SelectedIndex].ToString());
+            var addWindow = new AddEditInterval
+            {
+                Interval = _settings.AllowedIntervals[listBoxAllowedIntervals.SelectedIndex]
+            };
+            addWindow.ShowDialog();
+            RefreshListBoxAllowedIntervals();
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)
@@ -104,7 +110,8 @@ namespace LtcWinConfig
                     numericUpDownWednesday.Value =
                         numericUpDownThursday.Value =
                             numericUpDownFriday.Value =
-                                numericUpDownSaturday.Value = numericUpDownSunday.Value = numericUpDownAll.Value;
+                                numericUpDownSaturday.Value = 
+                                    numericUpDownSunday.Value = numericUpDownAll.Value;
         }
     }
 }
