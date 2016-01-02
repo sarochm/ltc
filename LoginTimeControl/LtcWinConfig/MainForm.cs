@@ -38,7 +38,6 @@ namespace LtcWinConfig
                 ? numericUpDownLeft.Minimum
                 : _settings.TodayRemainsMinutes;
             listBoxAllowedIntervals.DataSource = _settings.AllowedIntervals;
-            // listBoxAllowedIntervals.DisplayMember = "TimeToStr";
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -67,10 +66,19 @@ namespace LtcWinConfig
             _settingsManager.SaveSettings(_settings);
         }
 
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            EditInterval();
+        }
+
         private void listBoxAllowedIntervals_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            EditInterval();
+        }
+
+        private void EditInterval()
+        {
             if (listBoxAllowedIntervals.SelectedIndex == -1) return;
-            //MessageBox.Show(_settings.AllowedIntervals[(sender as ListBox).SelectedIndex].ToString());
             var addWindow = new AddEditInterval
             {
                 Interval = _settings.AllowedIntervals[listBoxAllowedIntervals.SelectedIndex]
@@ -110,8 +118,13 @@ namespace LtcWinConfig
                     numericUpDownWednesday.Value =
                         numericUpDownThursday.Value =
                             numericUpDownFriday.Value =
-                                numericUpDownSaturday.Value = 
+                                numericUpDownSaturday.Value =
                                     numericUpDownSunday.Value = numericUpDownAll.Value;
+        }
+
+        private void listBoxAllowedIntervals_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buttonEdit.Enabled = listBoxAllowedIntervals.SelectedIndex != -1;
         }
     }
 }

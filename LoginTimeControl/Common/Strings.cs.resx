@@ -123,6 +123,9 @@
   <data name="Caution" xml:space="preserve">
     <value>Pozor</value>
   </data>
+  <data name="EditInterval" xml:space="preserve">
+    <value>Uprava intervalu</value>
+  </data>
   <data name="Exit" xml:space="preserve">
     <value>Ukonči</value>
   </data>

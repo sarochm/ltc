@@ -142,4 +142,7 @@
   <data name="label2.Text" xml:space="preserve">
     <value>Čas do</value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Přidej Interval</value>
+  </data>
 </root>

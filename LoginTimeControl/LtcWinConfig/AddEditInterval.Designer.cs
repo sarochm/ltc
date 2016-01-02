@@ -47,6 +47,7 @@
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
             this.dateTimePickerFrom.ShowUpDown = true;
             this.dateTimePickerFrom.Value = new System.DateTime(2015, 12, 22, 10, 0, 0, 0);
+            this.dateTimePickerFrom.ValueChanged += new System.EventHandler(this.dateTimePickerFrom_ValueChanged);
             // 
             // dateTimePickerTo
             // 
@@ -55,6 +56,7 @@
             this.dateTimePickerTo.Name = "dateTimePickerTo";
             this.dateTimePickerTo.ShowUpDown = true;
             this.dateTimePickerTo.Value = new System.DateTime(2015, 12, 22, 10, 0, 0, 0);
+            this.dateTimePickerTo.ValueChanged += new System.EventHandler(this.dateTimePickerTo_ValueChanged);
             // 
             // checkedListBoxDays
             // 
@@ -62,6 +64,7 @@
             this.checkedListBoxDays.CheckOnClick = true;
             this.checkedListBoxDays.FormattingEnabled = true;
             this.checkedListBoxDays.Name = "checkedListBoxDays";
+            this.checkedListBoxDays.SelectedValueChanged += new System.EventHandler(this.checkedListBoxDays_SelectedValueChanged);
             // 
             // buttonAll
             // 

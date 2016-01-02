@@ -170,7 +170,7 @@
     <value>Sobota</value>
   </data>
   <data name="buttonRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 141</value>
+    <value>168, 141</value>
   </data>
   <data name="buttonRemove.Text" xml:space="preserve">
     <value>Odstraň</value>
@@ -183,6 +183,12 @@
   </data>
   <data name="groupBoxIntervals.Text" xml:space="preserve">
     <value>Povolené intervaly</value>
+  </data>
+  <data name="buttonEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 141</value>
+  </data>
+  <data name="buttonEdit.Text" xml:space="preserve">
+    <value>Uprav</value>
   </data>
   <data name="groupBoxDayLimits.Text" xml:space="preserve">
     <value>Denní limity v minutách</value>

@@ -79,6 +79,15 @@ namespace Common {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit Interval.
+        /// </summary>
+        public static string EditInterval {
+            get {
+                return ResourceManager.GetString("EditInterval", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
         public static string Exit {
