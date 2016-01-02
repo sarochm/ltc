@@ -46,6 +46,7 @@ namespace LtcWinConfig
             {
                 checkedListBoxDays.SetItemCheckState(i, CheckState.Checked);
             }
+            SetSaveButtonEnable();
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
@@ -54,6 +55,7 @@ namespace LtcWinConfig
             {
                 checkedListBoxDays.SetItemCheckState(i, CheckState.Unchecked);
             }
+            SetSaveButtonEnable();
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -76,10 +78,6 @@ namespace LtcWinConfig
                 buttonSave.Enabled = false;
         }
 
-        private void checkedListBoxDays_SelectedValueChanged(object sender, EventArgs e)
-        {
-            SetSaveButtonEnable();
-        }
 
         private void dateTimePickerFrom_ValueChanged(object sender, EventArgs e)
         {
@@ -89,6 +87,13 @@ namespace LtcWinConfig
         private void dateTimePickerTo_ValueChanged(object sender, EventArgs e)
         {
             SetSaveButtonEnable();
+        }
+
+        private void checkedListBoxDays_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            // http://stackoverflow.com/questions/3666682/which-checkedlistbox-event-triggers-after-a-item-is-checked
+            // for delay check
+            this.BeginInvoke(new MethodInvoker(SetSaveButtonEnable), null);
         }
     }
 }

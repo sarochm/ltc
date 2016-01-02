@@ -60,11 +60,11 @@
             // 
             // checkedListBoxDays
             // 
-            resources.ApplyResources(this.checkedListBoxDays, "checkedListBoxDays");
             this.checkedListBoxDays.CheckOnClick = true;
             this.checkedListBoxDays.FormattingEnabled = true;
+            resources.ApplyResources(this.checkedListBoxDays, "checkedListBoxDays");
             this.checkedListBoxDays.Name = "checkedListBoxDays";
-            this.checkedListBoxDays.SelectedValueChanged += new System.EventHandler(this.checkedListBoxDays_SelectedValueChanged);
+            this.checkedListBoxDays.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxDays_ItemCheck);
             // 
             // buttonAll
             // 
@@ -82,16 +82,16 @@
             // 
             // buttonSave
             // 
-            resources.ApplyResources(this.buttonSave, "buttonSave");
             this.buttonSave.DialogResult = System.Windows.Forms.DialogResult.OK;
+            resources.ApplyResources(this.buttonSave, "buttonSave");
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonCancel
             // 
-            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
