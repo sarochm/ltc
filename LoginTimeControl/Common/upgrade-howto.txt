@@ -1,0 +1,5 @@
+﻿change product code and version - in setup - organize your setup - General infprmation
+never change upgrade code
+
+http://stackoverflow.com/questions/12337860/update-an-existing-installation-using-installshield-le
+
