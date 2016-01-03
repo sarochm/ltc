@@ -129,11 +129,32 @@
   <data name="Exit" xml:space="preserve">
     <value>Ukonči</value>
   </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Pátek</value>
+  </data>
   <data name="Initializing" xml:space="preserve">
     <value>Připravuji</value>
   </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Pondělí</value>
+  </data>
   <data name="P0P1MinutesLeft" xml:space="preserve">
     <value>Zbývá {0}/{1} minut </value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Sobota</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Neděle</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Čtvrtek</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Úterý</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Středa</value>
   </data>
   <data name="YouWillBeLoggedOutInP0Minutes" xml:space="preserve">
     <value>Budeš odhlášen za {0} minut</value>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml.Serialization;
 
 namespace Common
@@ -41,7 +42,7 @@ namespace Common
 
         public override string ToString()
         {
-            return string.Format("{0} - {1}   {2}", TimeFromStr, TimeToStr, string.Join(",", Days));
+            return string.Format("{0} - {1}   {2}", TimeFromStr, TimeToStr, string.Join(",", Days.Select(d =>d.ToLocalizedString())));
         }
     }
 }

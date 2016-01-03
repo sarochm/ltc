@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DayOfWeekExtensions.cs" />
     <Compile Include="EventLogger.cs" />
     <Compile Include="IEventLogger.cs" />
     <Compile Include="Interval.cs" />
