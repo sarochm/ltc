@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 using Common;
@@ -16,7 +17,7 @@ namespace TryApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
-            // CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.GetCultureInfo("cs-CZ");
+            //CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.GetCultureInfo("cs-CZ");
 
             var eventLogger = new EventLogger("LTC - TryApp");
             var notificator = new Notificator(eventLogger, new SettingsManager(eventLogger));

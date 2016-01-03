@@ -13,12 +13,14 @@ namespace Common
 
         public void Debug(string message)
         {
-            _eventLog.WriteEntry("Debug: "+message, EventLogEntryType.Information);
+#if DEBUG
+            _eventLog.WriteEntry("Debug: " + message, EventLogEntryType.Information);
+#endif
         }
 
         public void Info(string message)
         {
-            _eventLog.WriteEntry(message,EventLogEntryType.Information);
+            _eventLog.WriteEntry(message, EventLogEntryType.Information);
         }
 
         public void Warning(string message)

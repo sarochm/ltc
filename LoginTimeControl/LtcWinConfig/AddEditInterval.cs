@@ -16,9 +16,9 @@ namespace LtcWinConfig
 
         private void AddEditInterval_Load(object sender, EventArgs e)
         {
-            foreach (var day in Enum.GetValues(typeof (DayOfWeek)))
+            foreach (DayOfWeek day in Enum.GetValues(typeof (DayOfWeek)))
             {
-                checkedListBoxDays.Items.Add(day);
+                checkedListBoxDays.Items.Add(day.ToLocalizedString());
             }
             if (Interval == null) SetupForAdding();
             else SetupForEditing();
@@ -64,7 +64,7 @@ namespace LtcWinConfig
             Interval.TimeFrom = dateTimePickerFrom.Value.TimeOfDay;
             Interval.TimeTo = dateTimePickerTo.Value.TimeOfDay;
             Interval.Days = new HashSet<DayOfWeek>();
-            foreach (var checkedItem in checkedListBoxDays.CheckedItems)
+            foreach (var checkedItem in checkedListBoxDays.CheckedIndices)
             {
                 Interval.Days.Add((DayOfWeek) checkedItem);
             }

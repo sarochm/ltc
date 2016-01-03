@@ -4407,9 +4407,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKAPPPOOLS</td><td>##IDS_PROGMSG_IIS_ROLLBACKAPPPOOLS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
-		<row><td>ProductCode</td><td>{A8323ED9-47C5-48C1-ABE1-111FF5916400}</td><td/></row>
+		<row><td>ProductCode</td><td>{8007BE1D-2ADF-4B5B-B1D6-BE2B69870B3C}</td><td/></row>
 		<row><td>ProductName</td><td>MSC Login Time Control</td><td/></row>
-		<row><td>ProductVersion</td><td>0.92</td><td/></row>
+		<row><td>ProductVersion</td><td>0.93</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
