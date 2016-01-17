@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
+using Microsoft.Practices.Unity;
 
 namespace Common
 {
@@ -15,7 +16,12 @@ namespace Common
         private readonly string _fileName;
         private readonly XmlSerializer _xmlSerializer;
 
-        public SettingsManager(IEventLogger eventLogger, string fileName = "LtcSettings.xml")
+        [InjectionConstructor]
+        public SettingsManager(IEventLogger eventLogger) : this(eventLogger, "LtcSettings.xml")
+        {
+        }
+
+        public SettingsManager(IEventLogger eventLogger, string fileName)
         {
             _eventLogger = eventLogger;
             _xmlSerializer = new XmlSerializer(typeof (Settings));

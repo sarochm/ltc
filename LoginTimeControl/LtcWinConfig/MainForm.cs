@@ -8,19 +8,20 @@ namespace LtcWinConfig
     public partial class MainForm : Form
     {
         private Settings _settings;
-        private SettingsManager _settingsManager;
+        private readonly ISettingsManager _settingsManager;
 
 
-        public MainForm()
+        public MainForm(ISettingsManager settingsManager)
         {
             InitializeComponent();
             Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
+            _settingsManager = settingsManager;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            var eventLogger = new EventLogger("LTC Config");
-            _settingsManager = new SettingsManager(eventLogger);
+            //var eventLogger = new EventLogger("LTC Config");
+            //_settingsManager = new SettingsManager(eventLogger);
             LoadSettings();
         }
 

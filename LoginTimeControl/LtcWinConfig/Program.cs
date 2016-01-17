@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Forms;
+using Common;
+using Microsoft.Practices.Unity;
 
 namespace LtcWinConfig
 {
@@ -15,7 +17,12 @@ namespace LtcWinConfig
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.GetCultureInfo("cs-CZ");
-            Application.Run(new MainForm());
+            
+            IUnityContainer unityContainer = new UnityContainer();
+            unityContainer.RegisterType<IEventLogger, EventLogger>(new InjectionConstructor("MSC-LTC config app"));
+            unityContainer.RegisterType<ISettingsManager, SettingsManager>();
+            
+            Application.Run(unityContainer.Resolve<MainForm>());
         }
     }
 }
