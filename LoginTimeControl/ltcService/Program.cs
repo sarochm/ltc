@@ -1,4 +1,6 @@
 ﻿using System.ServiceProcess;
+using Common;
+using Microsoft.Practices.Unity;
 
 namespace LtcService
 {
@@ -9,10 +11,17 @@ namespace LtcService
         /// </summary>
         static void Main()
         {
+            UnityContainer unityContainer = new UnityContainer();
+            unityContainer.RegisterType<IEventLogger, EventLogger>(new InjectionConstructor("MSC-LTC service"));
+            unityContainer.RegisterType<IUserUnloger, UserUnloger>(new ContainerControlledLifetimeManager());
+            unityContainer.RegisterType<IOsUsersReader,OsUsersReader>(new ContainerControlledLifetimeManager());
+            unityContainer.RegisterType<ISettingsManager,SettingsManager>(new ContainerControlledLifetimeManager());
+            unityContainer.RegisterType<IEvaluator,Evaluator>(new ContainerControlledLifetimeManager());
+
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[] 
             { 
-                new LtcService() 
+                unityContainer.Resolve<LtcService>() 
             };
             ServiceBase.Run(ServicesToRun);
         }

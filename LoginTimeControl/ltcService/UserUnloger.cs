@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 namespace LtcService
 {
-    public class UserUnloger
+    public class UserUnloger : IUserUnloger
     {
         [DllImport("wtsapi32.dll", SetLastError = true)]
         private static extern bool WTSLogoffSession(IntPtr hServer, int SessionId, bool bWait);
@@ -28,7 +28,7 @@ namespace LtcService
         [DllImport("wtsapi32.dll")]
         private static extern void WTSFreeMemory(IntPtr pMemory);
 
-        internal List<int> GetSessionIDs(IntPtr server)
+        private List<int> GetSessionIDs(IntPtr server)
         {
             var sessionIds = new List<int>();
             var buffer = IntPtr.Zero;

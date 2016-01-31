@@ -60,6 +60,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Evaluator.cs" />
+    <Compile Include="IEvaluator.cs" />
+    <Compile Include="IOsUsersReader.cs" />
+    <Compile Include="IUserUnloger.cs" />
     <Compile Include="LtcService.cs">
       <SubType>Component</SubType>
     </Compile>

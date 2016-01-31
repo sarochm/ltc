@@ -3,24 +3,31 @@ using Common;
 
 namespace LtcService
 {
-    public class Evaluator
+    public class Evaluator : IEvaluator
     {
         private const int TicksForCountDown = 4;
         private const int TicksAfterLogOff = 2;
-        private readonly SettingsManager _settingsManager;
+        private readonly ISettingsManager _settingsManager;
+        private bool _initialized = false;
 
-        public Evaluator(IEventLogger eventLogger)
+        public Evaluator(ISettingsManager settingsManager)
         {
-            _settingsManager = new SettingsManager(eventLogger);
+            _settingsManager = settingsManager;
+        }
+
+        public void Initialize()
+        {
             var settings = _settingsManager.LoadSettings();
             CheckToday(settings);
             settings.LogoutCountdown = TicksForCountDown;
             settings.LogoutStarted = false;
             _settingsManager.SaveSettings(settings);
+            _initialized = true;
         }
 
         public bool Tick()
         {
+            if (!_initialized) throw new InvalidOperationException("Evaluator have to be initialized first");
             var result = false;
             var settings = _settingsManager.LoadSettings();
             CheckToday(settings);

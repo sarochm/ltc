@@ -12,26 +12,29 @@ namespace LtcService
     {
         private const int CheckInterval = 60000; // 60 seconds
         private List<string> _adminUsers;
-        private Evaluator _evaluator;
-        private EventLogger _eventLogger;
+        private readonly IEvaluator _evaluator;
+        private readonly IEventLogger _eventLogger;
         private bool _notAdminUserLoggedIn;
         private Timer _timer;
-        private UserUnloger _userUnloger;
+        private readonly IUserUnloger _userUnloger;
+        private readonly IOsUsersReader _osUsersReader;
 
-        public LtcService()
+        public LtcService(IEventLogger eventLogger, IUserUnloger userUnloger, IOsUsersReader osUsersReader, IEvaluator evaluator)
         {
             InitializeComponent();
             Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
             _notAdminUserLoggedIn = false;
+            _eventLogger = eventLogger;
+            _userUnloger = userUnloger;
+            _osUsersReader = osUsersReader;
+            _evaluator = evaluator;
         }
 
 
         protected override void OnStart(string[] args)
         {
-            _eventLogger = new EventLogger(GetType().Name);
-            _evaluator = new Evaluator(_eventLogger);
-            _adminUsers = new OsUsersReader().GetAdmins();
-            _userUnloger = new UserUnloger();
+            _adminUsers = _osUsersReader.GetAdmins();
+            _evaluator.Initialize();
             _timer = new Timer(CheckInterval);
             _timer.Elapsed += OnTimer;
             _timer.Start();

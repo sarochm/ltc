@@ -5,14 +5,14 @@ using System.DirectoryServices;
 
 namespace LtcService
 {
-    public class OsUsersReader
+    public class OsUsersReader : IOsUsersReader
     {
         public List<string> GetAdmins()
         {
             return GetGroupMembers("administrators");
         }
 
-        public List<string> GetGroupMembers(string group)
+        private List<string> GetGroupMembers(string group)
         {
             var userNames = new List<string>();
 
