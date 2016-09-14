@@ -16,7 +16,7 @@ namespace LtcWinConfig
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.GetCultureInfo("cs-CZ");
+            //CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.GetCultureInfo("de-DE");
             
             IUnityContainer unityContainer = new UnityContainer();
             unityContainer.RegisterType<IEventLogger, EventLogger>(new InjectionConstructor("MSC-LTC config app"));

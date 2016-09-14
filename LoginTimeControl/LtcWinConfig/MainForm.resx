@@ -159,6 +159,9 @@
   <data name="&gt;&gt;numericUpDownAll.Parent" xml:space="preserve">
     <value>groupBoxDayLimits</value>
   </data>
+  <data name="numericUpDownMonday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 34</value>
+  </data>
   <data name="numericUpDownTuesday.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -180,8 +183,14 @@
   <data name="groupBoxDayLimits.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
+  <data name="&gt;&gt;numericUpDownLeft.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;labelWednesday.Parent" xml:space="preserve">
     <value>groupBoxDayLimits</value>
+  </data>
+  <data name="numericUpDownSunday.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
   <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -198,12 +207,6 @@
   <data name="listBoxAllowedIntervals.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 17</value>
   </data>
-  <data name="&gt;&gt;buttonRemove.Parent" xml:space="preserve">
-    <value>groupBoxIntervals</value>
-  </data>
-  <data name="&gt;&gt;labelThursday.Parent" xml:space="preserve">
-    <value>groupBoxDayLimits</value>
-  </data>
   <data name="labelLeft.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 13</value>
   </data>
@@ -212,6 +215,9 @@
   </data>
   <data name="labelWednesday.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="numericUpDownWednesday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
   </data>
   <data name="&gt;&gt;labelSaturday.Name" xml:space="preserve">
     <value>labelSaturday</value>
@@ -240,14 +246,14 @@
   <data name="&gt;&gt;labelMonday.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="&gt;&gt;labelThursday.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
   <data name="&gt;&gt;labelSunday.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="&gt;&gt;labelSaturday.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="&gt;&gt;buttonCancel.Name" xml:space="preserve">
-    <value>buttonCancel</value>
   </data>
   <data name="numericUpDownFriday.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
@@ -276,6 +282,9 @@
   <data name="labelWednesday.Location" type="System.Drawing.Point, System.Drawing">
     <value>144, 18</value>
   </data>
+  <data name="&gt;&gt;numericUpDownWednesday.Parent" xml:space="preserve">
+    <value>groupBoxDayLimits</value>
+  </data>
   <data name="numericUpDownThursday.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
   </data>
@@ -288,8 +297,8 @@
   <data name="&gt;&gt;numericUpDownLeft.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="labelSunday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;labelThursday.Name" xml:space="preserve">
+    <value>labelThursday</value>
   </data>
   <data name="&gt;&gt;labelLeft.Parent" xml:space="preserve">
     <value>$this</value>
@@ -306,32 +315,23 @@
   <data name="&gt;&gt;buttonCancel.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="labelMonday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 13</value>
-  </data>
   <data name="labelWednesday.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 13</value>
   </data>
   <data name="labelAll.Location" type="System.Drawing.Point, System.Drawing">
     <value>331, 18</value>
   </data>
-  <data name="groupBoxIntervals.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 12</value>
-  </data>
   <data name="&gt;&gt;buttonCancel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;numericUpDownFriday.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonRemove.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="buttonCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="labelLeft.Text" xml:space="preserve">
     <value>Today minutes left</value>
   </data>
-  <data name="labelThursday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;buttonCancel.Name" xml:space="preserve">
+    <value>buttonCancel</value>
   </data>
   <data name="&gt;&gt;numericUpDownMonday.Name" xml:space="preserve">
     <value>numericUpDownMonday</value>
@@ -342,17 +342,11 @@
   <data name="labelSunday.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="numericUpDownThursday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 34</value>
-  </data>
-  <data name="&gt;&gt;labelThursday.Name" xml:space="preserve">
-    <value>labelThursday</value>
+  <data name="&gt;&gt;labelTuesday.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
   <data name="&gt;&gt;labelMonday.Name" xml:space="preserve">
     <value>labelMonday</value>
-  </data>
-  <data name="&gt;&gt;listBoxAllowedIntervals.Parent" xml:space="preserve">
-    <value>groupBoxIntervals</value>
   </data>
   <data name="labelSunday.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -375,23 +369,17 @@
   <data name="buttonOK.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;labelTuesday.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
   <data name="numericUpDownMonday.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="numericUpDownSunday.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 34</value>
   </data>
-  <data name="labelLeft.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
   </data>
-  <data name="numericUpDownAll.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;buttonEdit.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;labelFriday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="numericUpDownWednesday.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -399,11 +387,11 @@
   <data name="labelSaturday.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 13</value>
   </data>
-  <data name="labelMonday.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
   <data name="labelThursday.Text" xml:space="preserve">
     <value>Thursday</value>
+  </data>
+  <data name="labelLeft.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;labelLeft.Name" xml:space="preserve">
     <value>labelLeft</value>
@@ -416,6 +404,9 @@
   </data>
   <data name="buttonOK.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
+  </data>
+  <data name="numericUpDownSunday.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
   </data>
   <data name="numericUpDownSunday.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
@@ -435,6 +426,9 @@
   <data name="buttonEdit.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
+  <data name="buttonAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 142</value>
+  </data>
   <data name="&gt;&gt;labelFriday.Parent" xml:space="preserve">
     <value>groupBoxDayLimits</value>
   </data>
@@ -453,6 +447,9 @@
   <data name="labelMonday.Text" xml:space="preserve">
     <value>Monday</value>
   </data>
+  <data name="labelThursday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 18</value>
+  </data>
   <data name="&gt;&gt;labelLeft.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -467,9 +464,6 @@
   </data>
   <data name="&gt;&gt;numericUpDownThursday.ZOrder" xml:space="preserve">
     <value>13</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownLeft.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="labelSaturday.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -486,11 +480,17 @@
   <data name="&gt;&gt;numericUpDownThursday.Parent" xml:space="preserve">
     <value>groupBoxDayLimits</value>
   </data>
+  <data name="numericUpDownThursday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 34</value>
+  </data>
   <data name="groupBoxDayLimits.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 193</value>
   </data>
   <data name="&gt;&gt;buttonAdd.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelThursday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="numericUpDownAll.Location" type="System.Drawing.Point, System.Drawing">
     <value>334, 34</value>
@@ -519,8 +519,14 @@
   <data name="numericUpDownWednesday.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
+  <data name="labelSaturday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 18</value>
+  </data>
   <data name="labelThursday.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
+  </data>
+  <data name="&gt;&gt;labelMonday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;numericUpDownFriday.Parent" xml:space="preserve">
     <value>groupBoxDayLimits</value>
@@ -528,14 +534,17 @@
   <data name="&gt;&gt;buttonOK.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="labelSunday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="&gt;&gt;labelFriday.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="labelAll.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
-  <data name="&gt;&gt;numericUpDownLeft.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;buttonRemove.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="numericUpDownFriday.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 34</value>
@@ -549,8 +558,8 @@
   <data name="&gt;&gt;buttonEdit.Parent" xml:space="preserve">
     <value>groupBoxIntervals</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MainForm</value>
+  <data name="buttonEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
   </data>
   <data name="&gt;&gt;labelTuesday.Parent" xml:space="preserve">
     <value>groupBoxDayLimits</value>
@@ -567,8 +576,8 @@
   <data name="labelSaturday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="numericUpDownSunday.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="numericUpDownAll.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
   </data>
   <data name="&gt;&gt;groupBoxIntervals.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -591,17 +600,17 @@
   <data name="&gt;&gt;labelSunday.Name" xml:space="preserve">
     <value>labelSunday</value>
   </data>
-  <data name="&gt;&gt;groupBoxDayLimits.Name" xml:space="preserve">
-    <value>groupBoxDayLimits</value>
+  <data name="numericUpDownLeft.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
   <data name="&gt;&gt;buttonOK.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="buttonOK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxDayLimits.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;numericUpDownFriday.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -618,20 +627,17 @@
   <data name="labelMonday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="numericUpDownSunday.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
+  <data name="labelMonday.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
   <data name="labelFriday.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="buttonOK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;numericUpDownFriday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="labelMonday.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;groupBoxDayLimits.Name" xml:space="preserve">
+    <value>groupBoxDayLimits</value>
   </data>
   <data name="&gt;&gt;buttonRemove.Name" xml:space="preserve">
     <value>buttonRemove</value>
@@ -639,11 +645,8 @@
   <data name="&gt;&gt;buttonAdd.Parent" xml:space="preserve">
     <value>groupBoxIntervals</value>
   </data>
-  <data name="&gt;&gt;labelFriday.Name" xml:space="preserve">
-    <value>labelFriday</value>
-  </data>
-  <data name="labelThursday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 18</value>
+  <data name="&gt;&gt;buttonEdit.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;labelSaturday.Parent" xml:space="preserve">
     <value>groupBoxDayLimits</value>
@@ -666,17 +669,8 @@
   <data name="labelFriday.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 13</value>
   </data>
-  <data name="buttonEdit.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
   <data name="labelAll.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="labelAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 13</value>
-  </data>
-  <data name="labelLeft.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;labelTuesday.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -696,8 +690,8 @@
   <data name="buttonRemove.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 142</value>
   </data>
-  <data name="&gt;&gt;labelFriday.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;buttonRemove.Parent" xml:space="preserve">
+    <value>groupBoxIntervals</value>
   </data>
   <data name="&gt;&gt;numericUpDownSaturday.Parent" xml:space="preserve">
     <value>groupBoxDayLimits</value>
@@ -714,14 +708,14 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>387, 356</value>
   </data>
-  <data name="numericUpDownMonday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 34</value>
+  <data name="&gt;&gt;listBoxAllowedIntervals.Parent" xml:space="preserve">
+    <value>groupBoxIntervals</value>
   </data>
   <data name="&gt;&gt;labelMonday.Parent" xml:space="preserve">
     <value>groupBoxDayLimits</value>
   </data>
-  <data name="&gt;&gt;labelMonday.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;numericUpDownLeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;groupBoxDayLimits.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -732,8 +726,8 @@
   <data name="buttonEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>87, 142</value>
   </data>
-  <data name="numericUpDownLeft.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="groupBoxIntervals.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 12</value>
   </data>
   <data name="numericUpDownWednesday.Location" type="System.Drawing.Point, System.Drawing">
     <value>147, 34</value>
@@ -744,14 +738,17 @@
   <data name="&gt;&gt;numericUpDownAll.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;numericUpDownWednesday.Parent" xml:space="preserve">
+  <data name="&gt;&gt;labelThursday.Parent" xml:space="preserve">
     <value>groupBoxDayLimits</value>
   </data>
   <data name="&gt;&gt;numericUpDownThursday.Name" xml:space="preserve">
     <value>numericUpDownThursday</value>
   </data>
-  <data name="&gt;&gt;labelThursday.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="buttonOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="labelMonday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="labelSunday.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 18</value>
@@ -759,14 +756,17 @@
   <data name="labelWednesday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="numericUpDownTuesday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 34</value>
+  </data>
   <data name="&gt;&gt;labelWednesday.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
   <data name="&gt;&gt;labelAll.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="buttonAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 142</value>
+  <data name="labelMonday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
   </data>
   <data name="&gt;&gt;listBoxAllowedIntervals.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -774,8 +774,8 @@
   <data name="&gt;&gt;numericUpDownAll.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="labelSaturday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 18</value>
+  <data name="&gt;&gt;groupBoxDayLimits.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonEdit.Name" xml:space="preserve">
     <value>buttonEdit</value>
@@ -786,14 +786,14 @@
   <data name="numericUpDownSaturday.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
-  <data name="numericUpDownTuesday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 34</value>
+  <data name="labelLeft.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="labelTuesday.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 13</value>
   </data>
-  <data name="buttonOK.Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="labelAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 13</value>
   </data>
   <data name="labelTuesday.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -810,13 +810,16 @@
   <data name="groupBoxDayLimits.Text" xml:space="preserve">
     <value>Day limits in minutes</value>
   </data>
-  <data name="numericUpDownWednesday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
+  <data name="&gt;&gt;labelFriday.Name" xml:space="preserve">
+    <value>labelFriday</value>
   </data>
   <data name="&gt;&gt;numericUpDownSaturday.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>de</value>
   </metadata>
 </root>
